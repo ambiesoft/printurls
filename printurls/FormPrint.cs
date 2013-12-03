@@ -14,6 +14,7 @@ namespace printurls
         public FormPrint()
         {
             InitializeComponent();
+            Program.commonwb(wbPrint);
             wbPrint.StatusTextChanged += new EventHandler(wbPrint_StatusTextChanged);
         }
         private void wbPrint_StatusTextChanged(object sender, EventArgs e)
@@ -28,50 +29,58 @@ namespace printurls
             basicTimer.Enabled = true;
         }
 
-        void wait(int second)
-        {
-            int start = Environment.TickCount;
-            while (((Environment.TickCount - start) / 1000) < second)
-            {
-                Application.DoEvents();
-                if (_closing)
-                    break;
-            }
-        }
+        //void wait(int second)
+        //{
+        //    int start = Environment.TickCount;
+        //    while (((Environment.TickCount - start) / 1000) < second)
+        //    {
+        //        Application.DoEvents();
+        //        if (_closing)
+        //            break;
+        //    }
+        //}
 
-        private void doit()
-        {
-            foreach (string url in _urls)
-            {
-                if (_closing)
-                    break;
+        //private void doit()
+        //{
+        //    foreach (string url in _urls)
+        //    {
+        //        if (_closing)
+        //            break;
 
-                while (chkPause.Checked)
-                {
-                    wait(5);
-                }
-                wbPrint.Navigate(url);
+        //        while (chkPause.Checked)
+        //        {
+        //            wait(5);
+        //        }
+        //        wbPrint.Navigate(url);
 
-                while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
-                {
-                    Application.DoEvents();
-                }
-                if (_closing)
-                    break;
-                wbPrint.Print();
+        //        while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
+        //        {
+        //            Application.DoEvents();
+        //        }
+        //        if (_closing)
+        //            break;
+        //        wbPrint.Print();
 
-                wait(decimal.ToInt32(udWait.Value));
-                while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
-                {
-                    Application.DoEvents();
-                }
-            }
-        }
-        bool _closing = false;
+        //        wait(decimal.ToInt32(udWait.Value));
+        //        while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
+        //        {
+        //            Application.DoEvents();
+        //        }
+        //    }
+        //}
+        //bool _closing = false;
         private void btnClose_Click(object sender, EventArgs e)
         {
-            _closing = true;
+            //_closing = true;
             Close();
+        }
+
+        void waitBrowser()
+        {
+            while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
+            {
+                Application.DoEvents();
+            }
         }
 
         int _curIndex = 0;
@@ -80,8 +89,6 @@ namespace printurls
 
         private void basicTimer_Tick(object sender, EventArgs e)
         {
-            if (chkPause.Checked)
-                return;
 
             if (_curIndex >= _urls.Count)
                 return;
@@ -89,8 +96,21 @@ namespace printurls
             if (inprocess)
                 return;
 
-            if (--_waitCounter >= 0)
+            if (_waitCounter >= 0)
+            {
+                --_waitCounter;
+                slStatus.Text = _waitCounter.ToString();
                 return;
+            }
+
+
+            if (chkPause.Checked)
+            {
+                slStatus.Text = "Paused";
+                return;
+            }
+
+            slStatus.Text = "";
 
             inprocess = true;
             progMain.Value = _curIndex;
@@ -100,23 +120,27 @@ namespace printurls
 
                 wbPrint.Navigate(url);
 
-                while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
-                {
-                    Application.DoEvents();
-                }
-                if (_closing)
+                waitBrowser();
+
+                if (chkPause.Checked)
                     return;
 
                 slStatus.Text = "Printing...";
                 wbPrint.Print();
                 slStatus.Text = "";
 
-                while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
-                {
-                    Application.DoEvents();
-                }
+                waitBrowser();
 
                 _waitCounter = (decimal.ToInt32(udWait.Value));
+                ++_curIndex;
+                if (_curIndex >= _urls.Count)
+                {
+                    MessageBox.Show("done!");
+                    Close();
+                    return;
+                }
+                this.Text = _curIndex.ToString() + "/" + _urls.Count.ToString();
+                progMain.Value = _curIndex;
             }
             catch (Exception ex)
             {

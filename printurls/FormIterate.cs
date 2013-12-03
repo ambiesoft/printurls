@@ -23,9 +23,15 @@ namespace printurls
         }
         internal string _url;
 
-
+        delegate void dele();
+        
         private void FormIterate_Load(object sender, EventArgs e)
         {
+            BeginInvoke(new dele(doit));
+        }
+        void doit()
+        {
+            
             wbBase.Navigate(_url);
 
             while (wbBase.ReadyState != WebBrowserReadyState.Complete)
