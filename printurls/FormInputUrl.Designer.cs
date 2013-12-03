@@ -37,56 +37,60 @@
             // 
             // txtUrl
             // 
-            this.txtUrl.Location = new System.Drawing.Point(12, 24);
+            this.txtUrl.AccessibleDescription = null;
+            this.txtUrl.AccessibleName = null;
+            resources.ApplyResources(this.txtUrl, "txtUrl");
+            this.txtUrl.BackgroundImage = null;
+            this.txtUrl.Font = null;
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(618, 19);
-            this.txtUrl.TabIndex = 0;
             // 
             // btnStart
             // 
+            this.btnStart.AccessibleDescription = null;
+            this.btnStart.AccessibleName = null;
+            resources.ApplyResources(this.btnStart, "btnStart");
+            this.btnStart.BackgroundImage = null;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnStart.Location = new System.Drawing.Point(474, 88);
+            this.btnStart.Font = null;
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 1;
-            this.btnStart.Text = "&Start";
             this.btnStart.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
+            this.btnCancel.AccessibleDescription = null;
+            this.btnCancel.AccessibleName = null;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.BackgroundImage = null;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(555, 88);
+            this.btnCancel.Font = null;
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.AccessibleDescription = null;
+            this.label1.AccessibleName = null;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Font = null;
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 12);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "&URL";
             // 
             // FormInputUrl
             // 
             this.AcceptButton = this.btnStart;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = null;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(642, 123);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtUrl);
+            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormInputUrl";
-            this.Text = "Enter URL : PrintURLs";
             this.ResumeLayout(false);
             this.PerformLayout();
 

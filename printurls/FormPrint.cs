@@ -66,7 +66,7 @@ namespace printurls
 
             if (chkPause.Checked)
             {
-                slStatus.Text = "Paused";
+                slStatus.Text = Properties.Resources.PAUSED;
                 return;
             }
 
@@ -85,7 +85,7 @@ namespace printurls
                 if (chkPause.Checked)
                     return;
 
-                slStatus.Text = "Printing...";
+                slStatus.Text = Properties.Resources.PRINTING;
                 wbPrint.Print();
                 slStatus.Text = "";
 
@@ -98,7 +98,7 @@ namespace printurls
 
                 if (_curIndex >= _urls.Count)
                 {
-                    MessageBox.Show("done!");
+                    MessageBox.Show(this, Properties.Resources.DONE);
                     Close();
                     return;
                 }

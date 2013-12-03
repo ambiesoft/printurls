@@ -43,7 +43,7 @@ namespace printurls
 		    return false;
 	    }
         /// <summary>
-        /// アプリケーションのメイン エントリ ポイントです。
+        /// 
         /// </summary>
         [STAThread]
         static void Main()
@@ -60,7 +60,7 @@ namespace printurls
             string url = inputdlg.txtUrl.Text;
             if (string.IsNullOrEmpty(url))
             {
-                showerror("no url");
+                showerror(printurls.Properties.Resources.NOURL);
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace printurls
 
             if (itrdlg._retresult.Count == 0)
             {
-                showerror("no urls");
+                showerror(printurls.Properties.Resources.NOURL);
                 return;
             }
 
