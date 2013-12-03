@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -96,10 +95,11 @@ namespace printurls
             if (inprocess)
                 return;
 
-            if (_waitCounter >= 0)
+            if (_waitCounter > 0)
             {
-                --_waitCounter;
                 slStatus.Text = _waitCounter.ToString();
+                --_waitCounter;
+                
                 return;
             }
 
