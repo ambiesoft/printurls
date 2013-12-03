@@ -15,8 +15,12 @@ namespace printurls
         {
             InitializeComponent();
             Program.commonwb(wbBase);
+            wbBase.StatusTextChanged += new EventHandler(wbBase_StatusTextChanged);
         }
-
+        private void wbBase_StatusTextChanged(object sender, EventArgs e)
+        {
+            slMain.Text = wbBase.StatusText;
+        }
         internal string _url;
 
 
@@ -46,34 +50,55 @@ namespace printurls
  
         }
 
+        string getUnhashUrl(Uri u)
+        {
+            string f = u.Fragment;
+            if (string.IsNullOrEmpty(f))
+                return u.AbsoluteUri;
+
+            string a = u.AbsoluteUri;
+            int i = a.LastIndexOf(f);
+            if (i < 0)
+                return a;
+
+            string ret = a.Substring(0, i);
+            return ret;
+        }
+
         private void btnUnique_Click(object sender, EventArgs e)
         {
             List<string> unique = new List<string>();
+            List<string> unique2add = new List<string>();
             foreach (ListViewItem item in listUrls.Items)
             {
                 Uri u;
+                string unhashurl;
                 try
                 {
                     u = new Uri(item.Text);
+                    unhashurl = getUnhashUrl(u);
                 }
                 catch (Exception) 
                 {
                     continue;
                 }
 
-                string nonhash = u.AbsoluteUri;
-                if (unique.Contains(nonhash))
+
+                if (unique.Contains(unhashurl))
                     continue;
 
-                unique.Add(item.Text);
+                unique.Add(unhashurl);
+                unique2add.Add(item.Text);
             }
 
             listUrls.Items.Clear();
 
-            foreach (string url in unique)
+            foreach (string url in unique2add)
                 listUrls.Items.Add(url);
                 
         }
+
+
 
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {

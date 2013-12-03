@@ -14,12 +14,18 @@ namespace printurls
         public FormPrint()
         {
             InitializeComponent();
+            wbPrint.StatusTextChanged += new EventHandler(wbPrint_StatusTextChanged);
         }
-
+        private void wbPrint_StatusTextChanged(object sender, EventArgs e)
+        {
+            slBrowser.Text = wbPrint.StatusText;
+        }
         internal List<string> _urls = null;
+        
         private void FormPrint_Load(object sender, EventArgs e)
         {
-            BeginInvoke(new dele(doit));
+            progMain.Maximum = _urls.Count;
+            basicTimer.Enabled = true;
         }
 
         void wait(int second)
@@ -33,7 +39,6 @@ namespace printurls
             }
         }
 
-        delegate void dele();
         private void doit()
         {
             foreach (string url in _urls)
@@ -67,6 +72,60 @@ namespace printurls
         {
             _closing = true;
             Close();
+        }
+
+        int _curIndex = 0;
+        static bool inprocess = false;
+        int _waitCounter=0;
+
+        private void basicTimer_Tick(object sender, EventArgs e)
+        {
+            if (chkPause.Checked)
+                return;
+
+            if (_curIndex >= _urls.Count)
+                return;
+
+            if (inprocess)
+                return;
+
+            if (--_waitCounter >= 0)
+                return;
+
+            inprocess = true;
+            progMain.Value = _curIndex;
+            try
+            {
+                string url = _urls[_curIndex];
+
+                wbPrint.Navigate(url);
+
+                while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
+                {
+                    Application.DoEvents();
+                }
+                if (_closing)
+                    return;
+
+                slStatus.Text = "Printing...";
+                wbPrint.Print();
+                slStatus.Text = "";
+
+                while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
+                {
+                    Application.DoEvents();
+                }
+
+                _waitCounter = (decimal.ToInt32(udWait.Value));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                inprocess = false;
+            }
         }
     }
 }
