@@ -28,46 +28,6 @@ namespace printurls
             basicTimer.Enabled = true;
         }
 
-        //void wait(int second)
-        //{
-        //    int start = Environment.TickCount;
-        //    while (((Environment.TickCount - start) / 1000) < second)
-        //    {
-        //        Application.DoEvents();
-        //        if (_closing)
-        //            break;
-        //    }
-        //}
-
-        //private void doit()
-        //{
-        //    foreach (string url in _urls)
-        //    {
-        //        if (_closing)
-        //            break;
-
-        //        while (chkPause.Checked)
-        //        {
-        //            wait(5);
-        //        }
-        //        wbPrint.Navigate(url);
-
-        //        while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
-        //        {
-        //            Application.DoEvents();
-        //        }
-        //        if (_closing)
-        //            break;
-        //        wbPrint.Print();
-
-        //        wait(decimal.ToInt32(udWait.Value));
-        //        while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
-        //        {
-        //            Application.DoEvents();
-        //        }
-        //    }
-        //}
-        //bool _closing = false;
         private void btnClose_Click(object sender, EventArgs e)
         {
             //_closing = true;
@@ -133,14 +93,15 @@ namespace printurls
 
                 _waitCounter = (decimal.ToInt32(udWait.Value));
                 ++_curIndex;
+                this.Text = _curIndex.ToString() + "/" + _urls.Count.ToString();
+                progMain.Value = _curIndex;
+
                 if (_curIndex >= _urls.Count)
                 {
                     MessageBox.Show("done!");
                     Close();
                     return;
                 }
-                this.Text = _curIndex.ToString() + "/" + _urls.Count.ToString();
-                progMain.Value = _curIndex;
             }
             catch (Exception ex)
             {
