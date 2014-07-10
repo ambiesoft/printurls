@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using mshtml;
 
 namespace printurls
 {
@@ -22,36 +23,75 @@ namespace printurls
         }
         internal string _url;
 
-        delegate void dele();
-        
         private void FormIterate_Load(object sender, EventArgs e)
         {
-            BeginInvoke(new dele(doit));
-        }
-        void doit()
-        {
-            
+            // BeginInvoke(new dele(doit));
             wbBase.Navigate(_url);
-
+        }
+        
+        void ExtractLinks(bool bOnlySelected)
+        {
             while (wbBase.ReadyState != WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
             }
 
-
-            HtmlDocument doc = wbBase.Document;
-            Dictionary<string, int> tagcounter = new Dictionary<string, int>();
-            List<string> urls = new List<string>();
-            foreach (HtmlElement elm in doc.All)
+            if (bOnlySelected)
             {
-                if (elm.TagName == "a" || elm.TagName == "A")
+                try
                 {
-                    string url = elm.GetAttribute("href");
-                    urls.Add(url);
-                    listUrls.Items.Add(url);
+                    IHTMLDocument2 htmlDocument = wbBase.Document.DomDocument as IHTMLDocument2;
+                    if (htmlDocument == null)
+                        throw new Exception("No htmlDocument");
+
+                    IHTMLSelectionObject currentSelection = htmlDocument.selection;
+                    if (currentSelection == null)
+                        throw new Exception("No Selection");
+
+                    //if (currentSelection.type == "Text")
+                    //    throw new Exception("No Links in the selection");
+
+                    //if(currentSelection.type!="Control")
+                    //    throw new Exception("No Links in the selection");
+
+
+                    IHTMLTxtRange range = currentSelection.createRange() as IHTMLTxtRange;
+                    if(range==null)
+                        throw new Exception("No Links in the selection");
+
+                    string html = range.htmlText;
+                    if(string.IsNullOrEmpty(html))
+                        throw new Exception("No Links in the selection");
+
+                    Uri baseurl = wbBase.Url;
+                    HtmlAgilityPack.HtmlDocument adoc = new HtmlAgilityPack.HtmlDocument();
+                    adoc.LoadHtml(html);
+                    foreach ( HtmlAgilityPack.HtmlNode link in adoc.DocumentNode.SelectNodes("//a[@href]"))
+                    {
+                        Uri u = new Uri(baseurl, link.Attributes["href"].Value.ToString());
+                        listUrls.Items.Add(u.AbsoluteUri);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
-
+            else
+            {
+                HtmlDocument doc = wbBase.Document;
+                Dictionary<string, int> tagcounter = new Dictionary<string, int>();
+                List<string> urls = new List<string>();
+                foreach (HtmlElement elm in doc.All)
+                {
+                    if (elm.TagName == "a" || elm.TagName == "A")
+                    {
+                        string url = elm.GetAttribute("href");
+                        urls.Add(url);
+                        listUrls.Items.Add(url);
+                    }
+                }
+            }
  
         }
 
@@ -121,6 +161,16 @@ namespace printurls
             {
                 _retresult.Add(item.Text);
             }
+        }
+
+        private void tsbExtractAllLinks_Click(object sender, EventArgs e)
+        {
+            ExtractLinks(false);
+        }
+
+        private void tsbExtractSelectedLinks_Click(object sender, EventArgs e)
+        {
+            ExtractLinks(true);
         }
 
 

@@ -37,9 +37,12 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.spWebList = new System.Windows.Forms.SplitContainer();
-            this.spRoot = new System.Windows.Forms.SplitContainer();
             this.listUrls = new DragNDrop.DragAndDropListView();
             this.hdUrl = new System.Windows.Forms.ColumnHeader();
+            this.spRoot = new System.Windows.Forms.SplitContainer();
+            this.tsExtract = new System.Windows.Forms.ToolStrip();
+            this.tsbExtractAllLinks = new System.Windows.Forms.ToolStripButton();
+            this.tsbExtractSelectedLinks = new System.Windows.Forms.ToolStripButton();
             this.statusMain.SuspendLayout();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
@@ -47,6 +50,7 @@
             this.spRoot.Panel1.SuspendLayout();
             this.spRoot.Panel2.SuspendLayout();
             this.spRoot.SuspendLayout();
+            this.tsExtract.SuspendLayout();
             this.SuspendLayout();
             // 
             // wbBase
@@ -114,7 +118,7 @@
             // slMain
             // 
             this.slMain.Name = "slMain";
-            this.slMain.Size = new System.Drawing.Size(37, 17);
+            this.slMain.Size = new System.Drawing.Size(43, 17);
             this.slMain.Text = "Ready";
             // 
             // spWebList
@@ -131,9 +135,30 @@
             // spWebList.Panel2
             // 
             this.spWebList.Panel2.Controls.Add(this.listUrls);
+            this.spWebList.Panel2.Controls.Add(this.tsExtract);
             this.spWebList.Size = new System.Drawing.Size(771, 462);
             this.spWebList.SplitterDistance = 231;
             this.spWebList.TabIndex = 8;
+            // 
+            // listUrls
+            // 
+            this.listUrls.AllowDrop = true;
+            this.listUrls.AllowReorder = true;
+            this.listUrls.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.hdUrl});
+            this.listUrls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listUrls.LineColor = System.Drawing.Color.Red;
+            this.listUrls.Location = new System.Drawing.Point(0, 25);
+            this.listUrls.Name = "listUrls";
+            this.listUrls.Size = new System.Drawing.Size(771, 202);
+            this.listUrls.TabIndex = 3;
+            this.listUrls.UseCompatibleStateImageBehavior = false;
+            this.listUrls.View = System.Windows.Forms.View.Details;
+            // 
+            // hdUrl
+            // 
+            this.hdUrl.Text = "URL";
+            this.hdUrl.Width = 256;
             // 
             // spRoot
             // 
@@ -157,25 +182,36 @@
             this.spRoot.SplitterDistance = 462;
             this.spRoot.TabIndex = 9;
             // 
-            // listUrls
+            // tsExtract
             // 
-            this.listUrls.AllowDrop = true;
-            this.listUrls.AllowReorder = true;
-            this.listUrls.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.hdUrl});
-            this.listUrls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listUrls.LineColor = System.Drawing.Color.Red;
-            this.listUrls.Location = new System.Drawing.Point(0, 0);
-            this.listUrls.Name = "listUrls";
-            this.listUrls.Size = new System.Drawing.Size(771, 227);
-            this.listUrls.TabIndex = 3;
-            this.listUrls.UseCompatibleStateImageBehavior = false;
-            this.listUrls.View = System.Windows.Forms.View.Details;
+            this.tsExtract.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbExtractAllLinks,
+            this.tsbExtractSelectedLinks});
+            this.tsExtract.Location = new System.Drawing.Point(0, 0);
+            this.tsExtract.Name = "tsExtract";
+            this.tsExtract.Size = new System.Drawing.Size(771, 25);
+            this.tsExtract.TabIndex = 4;
+            this.tsExtract.Text = "toolStrip1";
             // 
-            // hdUrl
+            // tsbExtractAllLinks
             // 
-            this.hdUrl.Text = "URL";
-            this.hdUrl.Width = 256;
+            this.tsbExtractAllLinks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbExtractAllLinks.Image = ((System.Drawing.Image)(resources.GetObject("tsbExtractAllLinks.Image")));
+            this.tsbExtractAllLinks.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExtractAllLinks.Name = "tsbExtractAllLinks";
+            this.tsbExtractAllLinks.Size = new System.Drawing.Size(105, 22);
+            this.tsbExtractAllLinks.Text = "Extract &All Links";
+            this.tsbExtractAllLinks.Click += new System.EventHandler(this.tsbExtractAllLinks_Click);
+            // 
+            // tsbExtractSelectedLinks
+            // 
+            this.tsbExtractSelectedLinks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsbExtractSelectedLinks.Image = ((System.Drawing.Image)(resources.GetObject("tsbExtractSelectedLinks.Image")));
+            this.tsbExtractSelectedLinks.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExtractSelectedLinks.Name = "tsbExtractSelectedLinks";
+            this.tsbExtractSelectedLinks.Size = new System.Drawing.Size(141, 22);
+            this.tsbExtractSelectedLinks.Text = "Extract &Selected Links";
+            this.tsbExtractSelectedLinks.Click += new System.EventHandler(this.tsbExtractSelectedLinks_Click);
             // 
             // FormIterate
             // 
@@ -194,10 +230,13 @@
             this.statusMain.PerformLayout();
             this.spWebList.Panel1.ResumeLayout(false);
             this.spWebList.Panel2.ResumeLayout(false);
+            this.spWebList.Panel2.PerformLayout();
             this.spWebList.ResumeLayout(false);
             this.spRoot.Panel1.ResumeLayout(false);
             this.spRoot.Panel2.ResumeLayout(false);
             this.spRoot.ResumeLayout(false);
+            this.tsExtract.ResumeLayout(false);
+            this.tsExtract.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,6 +255,9 @@
         private System.Windows.Forms.SplitContainer spRoot;
         private DragNDrop.DragAndDropListView listUrls;
         private System.Windows.Forms.ColumnHeader hdUrl;
+        private System.Windows.Forms.ToolStrip tsExtract;
+        private System.Windows.Forms.ToolStripButton tsbExtractAllLinks;
+        private System.Windows.Forms.ToolStripButton tsbExtractSelectedLinks;
     }
 }
 
