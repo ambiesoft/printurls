@@ -29,214 +29,238 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIterate));
-            this.wbBase = new System.Windows.Forms.WebBrowser();
-            this.btnRemoveItem = new System.Windows.Forms.Button();
-            this.btnUnique = new System.Windows.Forms.Button();
-            this.btnPrintAll = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.statusMain = new System.Windows.Forms.StatusStrip();
-            this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.spWebList = new System.Windows.Forms.SplitContainer();
+            this.wbBase = new System.Windows.Forms.WebBrowser();
             this.listUrls = new DragNDrop.DragAndDropListView();
             this.hdUrl = new System.Windows.Forms.ColumnHeader();
-            this.spRoot = new System.Windows.Forms.SplitContainer();
             this.tsExtract = new System.Windows.Forms.ToolStrip();
             this.tsbExtractAllLinks = new System.Windows.Forms.ToolStripButton();
             this.tsbExtractSelectedLinks = new System.Windows.Forms.ToolStripButton();
-            this.statusMain.SuspendLayout();
+            this.spRoot = new System.Windows.Forms.SplitContainer();
+            this.btnUnique = new System.Windows.Forms.Button();
+            this.btnPrintAll = new System.Windows.Forms.Button();
+            this.btnRemoveItem = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.statusMain = new System.Windows.Forms.StatusStrip();
+            this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
             this.spWebList.SuspendLayout();
+            this.tsExtract.SuspendLayout();
             this.spRoot.Panel1.SuspendLayout();
             this.spRoot.Panel2.SuspendLayout();
             this.spRoot.SuspendLayout();
-            this.tsExtract.SuspendLayout();
+            this.statusMain.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // wbBase
-            // 
-            this.wbBase.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wbBase.Location = new System.Drawing.Point(0, 0);
-            this.wbBase.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wbBase.Name = "wbBase";
-            this.wbBase.Size = new System.Drawing.Size(771, 231);
-            this.wbBase.TabIndex = 1;
-            // 
-            // btnRemoveItem
-            // 
-            this.btnRemoveItem.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRemoveItem.Location = new System.Drawing.Point(693, 3);
-            this.btnRemoveItem.Name = "btnRemoveItem";
-            this.btnRemoveItem.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveItem.TabIndex = 3;
-            this.btnRemoveItem.Text = "&Remove";
-            this.btnRemoveItem.UseVisualStyleBackColor = true;
-            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
-            // 
-            // btnUnique
-            // 
-            this.btnUnique.Location = new System.Drawing.Point(3, 3);
-            this.btnUnique.Name = "btnUnique";
-            this.btnUnique.Size = new System.Drawing.Size(170, 23);
-            this.btnUnique.TabIndex = 4;
-            this.btnUnique.Text = "&Unique";
-            this.btnUnique.UseVisualStyleBackColor = true;
-            this.btnUnique.Click += new System.EventHandler(this.btnUnique_Click);
-            // 
-            // btnPrintAll
-            // 
-            this.btnPrintAll.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPrintAll.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnPrintAll.Location = new System.Drawing.Point(388, 32);
-            this.btnPrintAll.Name = "btnPrintAll";
-            this.btnPrintAll.Size = new System.Drawing.Size(255, 23);
-            this.btnPrintAll.TabIndex = 5;
-            this.btnPrintAll.Text = "&Print URLs";
-            this.btnPrintAll.UseVisualStyleBackColor = true;
-            this.btnPrintAll.Click += new System.EventHandler(this.btnPrintAll_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(649, 32);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(119, 23);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "&Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // statusMain
-            // 
-            this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.slMain});
-            this.statusMain.Location = new System.Drawing.Point(0, 527);
-            this.statusMain.Name = "statusMain";
-            this.statusMain.Size = new System.Drawing.Size(771, 22);
-            this.statusMain.TabIndex = 7;
-            // 
-            // slMain
-            // 
-            this.slMain.Name = "slMain";
-            this.slMain.Size = new System.Drawing.Size(43, 17);
-            this.slMain.Text = "Ready";
             // 
             // spWebList
             // 
-            this.spWebList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spWebList.Location = new System.Drawing.Point(0, 0);
+            this.spWebList.AccessibleDescription = null;
+            this.spWebList.AccessibleName = null;
+            resources.ApplyResources(this.spWebList, "spWebList");
+            this.spWebList.BackgroundImage = null;
+            this.spWebList.Font = null;
             this.spWebList.Name = "spWebList";
-            this.spWebList.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // spWebList.Panel1
             // 
+            this.spWebList.Panel1.AccessibleDescription = null;
+            this.spWebList.Panel1.AccessibleName = null;
+            resources.ApplyResources(this.spWebList.Panel1, "spWebList.Panel1");
+            this.spWebList.Panel1.BackgroundImage = null;
             this.spWebList.Panel1.Controls.Add(this.wbBase);
+            this.spWebList.Panel1.Font = null;
             // 
             // spWebList.Panel2
             // 
+            this.spWebList.Panel2.AccessibleDescription = null;
+            this.spWebList.Panel2.AccessibleName = null;
+            resources.ApplyResources(this.spWebList.Panel2, "spWebList.Panel2");
+            this.spWebList.Panel2.BackgroundImage = null;
             this.spWebList.Panel2.Controls.Add(this.listUrls);
             this.spWebList.Panel2.Controls.Add(this.tsExtract);
-            this.spWebList.Size = new System.Drawing.Size(771, 462);
-            this.spWebList.SplitterDistance = 231;
-            this.spWebList.TabIndex = 8;
+            this.spWebList.Panel2.Font = null;
+            // 
+            // wbBase
+            // 
+            this.wbBase.AccessibleDescription = null;
+            this.wbBase.AccessibleName = null;
+            resources.ApplyResources(this.wbBase, "wbBase");
+            this.wbBase.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbBase.Name = "wbBase";
             // 
             // listUrls
             // 
+            this.listUrls.AccessibleDescription = null;
+            this.listUrls.AccessibleName = null;
+            resources.ApplyResources(this.listUrls, "listUrls");
             this.listUrls.AllowDrop = true;
             this.listUrls.AllowReorder = true;
+            this.listUrls.BackgroundImage = null;
             this.listUrls.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.hdUrl});
-            this.listUrls.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listUrls.Font = null;
             this.listUrls.LineColor = System.Drawing.Color.Red;
-            this.listUrls.Location = new System.Drawing.Point(0, 25);
             this.listUrls.Name = "listUrls";
-            this.listUrls.Size = new System.Drawing.Size(771, 202);
-            this.listUrls.TabIndex = 3;
             this.listUrls.UseCompatibleStateImageBehavior = false;
             this.listUrls.View = System.Windows.Forms.View.Details;
             // 
             // hdUrl
             // 
-            this.hdUrl.Text = "URL";
-            this.hdUrl.Width = 256;
-            // 
-            // spRoot
-            // 
-            this.spRoot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spRoot.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.spRoot.Location = new System.Drawing.Point(0, 0);
-            this.spRoot.Name = "spRoot";
-            this.spRoot.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // spRoot.Panel1
-            // 
-            this.spRoot.Panel1.Controls.Add(this.spWebList);
-            // 
-            // spRoot.Panel2
-            // 
-            this.spRoot.Panel2.Controls.Add(this.btnUnique);
-            this.spRoot.Panel2.Controls.Add(this.btnPrintAll);
-            this.spRoot.Panel2.Controls.Add(this.btnRemoveItem);
-            this.spRoot.Panel2.Controls.Add(this.btnCancel);
-            this.spRoot.Size = new System.Drawing.Size(771, 549);
-            this.spRoot.SplitterDistance = 462;
-            this.spRoot.TabIndex = 9;
+            resources.ApplyResources(this.hdUrl, "hdUrl");
             // 
             // tsExtract
             // 
+            this.tsExtract.AccessibleDescription = null;
+            this.tsExtract.AccessibleName = null;
+            resources.ApplyResources(this.tsExtract, "tsExtract");
+            this.tsExtract.BackgroundImage = null;
+            this.tsExtract.Font = null;
             this.tsExtract.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbExtractAllLinks,
             this.tsbExtractSelectedLinks});
-            this.tsExtract.Location = new System.Drawing.Point(0, 0);
             this.tsExtract.Name = "tsExtract";
-            this.tsExtract.Size = new System.Drawing.Size(771, 25);
-            this.tsExtract.TabIndex = 4;
-            this.tsExtract.Text = "toolStrip1";
             // 
             // tsbExtractAllLinks
             // 
+            this.tsbExtractAllLinks.AccessibleDescription = null;
+            this.tsbExtractAllLinks.AccessibleName = null;
+            resources.ApplyResources(this.tsbExtractAllLinks, "tsbExtractAllLinks");
+            this.tsbExtractAllLinks.BackgroundImage = null;
             this.tsbExtractAllLinks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbExtractAllLinks.Image = ((System.Drawing.Image)(resources.GetObject("tsbExtractAllLinks.Image")));
-            this.tsbExtractAllLinks.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExtractAllLinks.Name = "tsbExtractAllLinks";
-            this.tsbExtractAllLinks.Size = new System.Drawing.Size(105, 22);
-            this.tsbExtractAllLinks.Text = "Extract &All Links";
             this.tsbExtractAllLinks.Click += new System.EventHandler(this.tsbExtractAllLinks_Click);
             // 
             // tsbExtractSelectedLinks
             // 
+            this.tsbExtractSelectedLinks.AccessibleDescription = null;
+            this.tsbExtractSelectedLinks.AccessibleName = null;
+            resources.ApplyResources(this.tsbExtractSelectedLinks, "tsbExtractSelectedLinks");
+            this.tsbExtractSelectedLinks.BackgroundImage = null;
             this.tsbExtractSelectedLinks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsbExtractSelectedLinks.Image = ((System.Drawing.Image)(resources.GetObject("tsbExtractSelectedLinks.Image")));
-            this.tsbExtractSelectedLinks.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExtractSelectedLinks.Name = "tsbExtractSelectedLinks";
-            this.tsbExtractSelectedLinks.Size = new System.Drawing.Size(141, 22);
-            this.tsbExtractSelectedLinks.Text = "Extract &Selected Links";
             this.tsbExtractSelectedLinks.Click += new System.EventHandler(this.tsbExtractSelectedLinks_Click);
+            // 
+            // spRoot
+            // 
+            this.spRoot.AccessibleDescription = null;
+            this.spRoot.AccessibleName = null;
+            resources.ApplyResources(this.spRoot, "spRoot");
+            this.spRoot.BackgroundImage = null;
+            this.spRoot.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.spRoot.Font = null;
+            this.spRoot.Name = "spRoot";
+            // 
+            // spRoot.Panel1
+            // 
+            this.spRoot.Panel1.AccessibleDescription = null;
+            this.spRoot.Panel1.AccessibleName = null;
+            resources.ApplyResources(this.spRoot.Panel1, "spRoot.Panel1");
+            this.spRoot.Panel1.BackgroundImage = null;
+            this.spRoot.Panel1.Controls.Add(this.spWebList);
+            this.spRoot.Panel1.Font = null;
+            // 
+            // spRoot.Panel2
+            // 
+            this.spRoot.Panel2.AccessibleDescription = null;
+            this.spRoot.Panel2.AccessibleName = null;
+            resources.ApplyResources(this.spRoot.Panel2, "spRoot.Panel2");
+            this.spRoot.Panel2.BackgroundImage = null;
+            this.spRoot.Panel2.Controls.Add(this.btnUnique);
+            this.spRoot.Panel2.Controls.Add(this.btnPrintAll);
+            this.spRoot.Panel2.Controls.Add(this.btnRemoveItem);
+            this.spRoot.Panel2.Controls.Add(this.btnCancel);
+            this.spRoot.Panel2.Font = null;
+            // 
+            // btnUnique
+            // 
+            this.btnUnique.AccessibleDescription = null;
+            this.btnUnique.AccessibleName = null;
+            resources.ApplyResources(this.btnUnique, "btnUnique");
+            this.btnUnique.BackgroundImage = null;
+            this.btnUnique.Font = null;
+            this.btnUnique.Name = "btnUnique";
+            this.btnUnique.UseVisualStyleBackColor = true;
+            this.btnUnique.Click += new System.EventHandler(this.btnUnique_Click);
+            // 
+            // btnPrintAll
+            // 
+            this.btnPrintAll.AccessibleDescription = null;
+            this.btnPrintAll.AccessibleName = null;
+            resources.ApplyResources(this.btnPrintAll, "btnPrintAll");
+            this.btnPrintAll.BackgroundImage = null;
+            this.btnPrintAll.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnPrintAll.Font = null;
+            this.btnPrintAll.Name = "btnPrintAll";
+            this.btnPrintAll.UseVisualStyleBackColor = true;
+            this.btnPrintAll.Click += new System.EventHandler(this.btnPrintAll_Click);
+            // 
+            // btnRemoveItem
+            // 
+            this.btnRemoveItem.AccessibleDescription = null;
+            this.btnRemoveItem.AccessibleName = null;
+            resources.ApplyResources(this.btnRemoveItem, "btnRemoveItem");
+            this.btnRemoveItem.BackgroundImage = null;
+            this.btnRemoveItem.Font = null;
+            this.btnRemoveItem.Name = "btnRemoveItem";
+            this.btnRemoveItem.UseVisualStyleBackColor = true;
+            this.btnRemoveItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleDescription = null;
+            this.btnCancel.AccessibleName = null;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
+            this.btnCancel.BackgroundImage = null;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Font = null;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // statusMain
+            // 
+            this.statusMain.AccessibleDescription = null;
+            this.statusMain.AccessibleName = null;
+            resources.ApplyResources(this.statusMain, "statusMain");
+            this.statusMain.BackgroundImage = null;
+            this.statusMain.Font = null;
+            this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.slMain});
+            this.statusMain.Name = "statusMain";
+            // 
+            // slMain
+            // 
+            this.slMain.AccessibleDescription = null;
+            this.slMain.AccessibleName = null;
+            resources.ApplyResources(this.slMain, "slMain");
+            this.slMain.BackgroundImage = null;
+            this.slMain.Name = "slMain";
             // 
             // FormIterate
             // 
             this.AcceptButton = this.btnPrintAll;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = null;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(771, 549);
             this.Controls.Add(this.statusMain);
             this.Controls.Add(this.spRoot);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Font = null;
             this.Name = "FormIterate";
-            this.Text = "Extract URLs : PrintURLs";
             this.Load += new System.EventHandler(this.FormIterate_Load);
-            this.statusMain.ResumeLayout(false);
-            this.statusMain.PerformLayout();
             this.spWebList.Panel1.ResumeLayout(false);
             this.spWebList.Panel2.ResumeLayout(false);
             this.spWebList.Panel2.PerformLayout();
             this.spWebList.ResumeLayout(false);
+            this.tsExtract.ResumeLayout(false);
+            this.tsExtract.PerformLayout();
             this.spRoot.Panel1.ResumeLayout(false);
             this.spRoot.Panel2.ResumeLayout(false);
             this.spRoot.ResumeLayout(false);
-            this.tsExtract.ResumeLayout(false);
-            this.tsExtract.PerformLayout();
+            this.statusMain.ResumeLayout(false);
+            this.statusMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

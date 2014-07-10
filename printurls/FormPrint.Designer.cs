@@ -45,34 +45,36 @@
             // 
             // wbPrint
             // 
-            this.wbPrint.Location = new System.Drawing.Point(12, 38);
+            this.wbPrint.AccessibleDescription = null;
+            this.wbPrint.AccessibleName = null;
+            resources.ApplyResources(this.wbPrint, "wbPrint");
             this.wbPrint.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbPrint.Name = "wbPrint";
-            this.wbPrint.Size = new System.Drawing.Size(745, 300);
-            this.wbPrint.TabIndex = 0;
             // 
             // btnClose
             // 
+            this.btnClose.AccessibleDescription = null;
+            this.btnClose.AccessibleName = null;
+            resources.ApplyResources(this.btnClose, "btnClose");
+            this.btnClose.BackgroundImage = null;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnClose.Location = new System.Drawing.Point(682, 359);
+            this.btnClose.Font = null;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // udWait
             // 
-            this.udWait.Location = new System.Drawing.Point(12, 363);
+            this.udWait.AccessibleDescription = null;
+            this.udWait.AccessibleName = null;
+            resources.ApplyResources(this.udWait, "udWait");
+            this.udWait.Font = null;
             this.udWait.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.udWait.Name = "udWait";
-            this.udWait.Size = new System.Drawing.Size(87, 19);
-            this.udWait.TabIndex = 2;
             this.udWait.Value = new decimal(new int[] {
             30,
             0,
@@ -81,12 +83,12 @@
             // 
             // chkPause
             // 
-            this.chkPause.AutoSize = true;
-            this.chkPause.Location = new System.Drawing.Point(621, 363);
+            this.chkPause.AccessibleDescription = null;
+            this.chkPause.AccessibleName = null;
+            resources.ApplyResources(this.chkPause, "chkPause");
+            this.chkPause.BackgroundImage = null;
+            this.chkPause.Font = null;
             this.chkPause.Name = "chkPause";
-            this.chkPause.Size = new System.Drawing.Size(55, 16);
-            this.chkPause.TabIndex = 3;
-            this.chkPause.Text = "&Pause";
             this.chkPause.UseVisualStyleBackColor = true;
             // 
             // basicTimer
@@ -96,51 +98,59 @@
             // 
             // progMain
             // 
-            this.progMain.Location = new System.Drawing.Point(12, 11);
+            this.progMain.AccessibleDescription = null;
+            this.progMain.AccessibleName = null;
+            resources.ApplyResources(this.progMain, "progMain");
+            this.progMain.BackgroundImage = null;
+            this.progMain.Font = null;
             this.progMain.Name = "progMain";
-            this.progMain.Size = new System.Drawing.Size(745, 21);
-            this.progMain.TabIndex = 4;
             // 
             // statusMain
             // 
+            this.statusMain.AccessibleDescription = null;
+            this.statusMain.AccessibleName = null;
+            resources.ApplyResources(this.statusMain, "statusMain");
+            this.statusMain.BackgroundImage = null;
+            this.statusMain.Font = null;
             this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slBrowser,
             this.slStatus});
-            this.statusMain.Location = new System.Drawing.Point(0, 396);
             this.statusMain.Name = "statusMain";
-            this.statusMain.Size = new System.Drawing.Size(771, 22);
-            this.statusMain.TabIndex = 5;
-            this.statusMain.Text = "statusStrip1";
             // 
             // slBrowser
             // 
+            this.slBrowser.AccessibleDescription = null;
+            this.slBrowser.AccessibleName = null;
+            resources.ApplyResources(this.slBrowser, "slBrowser");
+            this.slBrowser.BackgroundImage = null;
             this.slBrowser.Name = "slBrowser";
-            this.slBrowser.Size = new System.Drawing.Size(80, 17);
-            this.slBrowser.Text = "Browser Ready";
             // 
             // slStatus
             // 
+            this.slStatus.AccessibleDescription = null;
+            this.slStatus.AccessibleName = null;
+            resources.ApplyResources(this.slStatus, "slStatus");
+            this.slStatus.BackgroundImage = null;
             this.slStatus.Name = "slStatus";
-            this.slStatus.Size = new System.Drawing.Size(38, 17);
-            this.slStatus.Text = "Ready";
             // 
             // FormPrint
             // 
             this.AcceptButton = this.btnClose;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 418);
+            this.BackgroundImage = null;
             this.Controls.Add(this.statusMain);
             this.Controls.Add(this.progMain);
             this.Controls.Add(this.chkPause);
             this.Controls.Add(this.udWait);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.wbPrint);
+            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormPrint";
-            this.Text = "Print : PrintURLs";
             this.Load += new System.EventHandler(this.FormPrint_Load);
             ((System.ComponentModel.ISupportInitialize)(this.udWait)).EndInit();
             this.statusMain.ResumeLayout(false);
