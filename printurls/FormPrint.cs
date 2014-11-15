@@ -34,12 +34,20 @@ namespace printurls
             Close();
         }
 
+        private bool _forcenext;
         void waitBrowser()
         {
+            btnPrintAndGoNext.Enabled = true;
             while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
+                if (_forcenext)
+                {
+                    _forcenext = false;
+                    break;
+                }
             }
+            btnPrintAndGoNext.Enabled = false;
         }
 
         int _curIndex = 0;
@@ -111,6 +119,11 @@ namespace printurls
             {
                 inprocess = false;
             }
+        }
+
+        private void btnPrintAndGoNext_Click(object sender, EventArgs e)
+        {
+            _forcenext = true;
         }
     }
 }
