@@ -173,6 +173,103 @@ namespace printurls
             ExtractLinks(true);
         }
 
+        private void tssbInsertURLs_ButtonClick(object sender, EventArgs e)
+        {
+            try
+            {
+                string all = Clipboard.GetText();
+                txtTmp.Text = all;
+                foreach (string line in txtTmp.Lines)
+                {
+                    listUrls.Items.Add(line);
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, Application.ProductName); }
+
+
+        }
+
+        private string[] getDeployedLines(string durl)
+        {
+            List<string> rets = new List<string>();
+            if(string.IsNullOrEmpty(durl))
+                return rets.ToArray();
+
+            int lkakko = durl.IndexOf('[',0);
+            if(lkakko < 0)
+                return rets.ToArray();
+
+            int rkakko = durl.IndexOf(']',lkakko);
+            if(rkakko <0)
+                return rets.ToArray();
+
+            string allcont = durl.Substring(lkakko+1, rkakko-lkakko-1);
+            string[] tmp = allcont.Split('-');
+            if(tmp.Length!=2)
+                return rets.ToArray();
+
+            string startindex = tmp[0];
+            int istartindex;
+            if(!int.TryParse(startindex, out istartindex))
+                return rets.ToArray();
+
+            string secondpart = tmp[1];
+            int iendindex=0;
+            int step = 0;
+            tmp = secondpart.Split(',');
+            if(tmp.Length==1)
+            {
+                string endindex = tmp[0];
+                if(!int.TryParse(endindex, out iendindex))
+                    return rets.ToArray();
+
+            }
+            else if(tmp.Length==2)
+            {
+                string endindex = tmp[0];
+                if(!int.TryParse(endindex, out iendindex))
+                    return rets.ToArray();
+
+                string stepstring = tmp[1];
+                if(!int.TryParse(stepstring, out step))
+                    return rets.ToArray();
+            }
+            else
+            {
+                return rets.ToArray();
+            }
+
+            if(step==0)
+                step=1;
+
+            for(int i=istartindex ; i <= iendindex ; i=i+step)
+            {
+                string dekita = durl.Substring(0, lkakko);
+                dekita += i.ToString();
+                dekita += durl.Substring(rkakko + 1);
+                rets.Add(dekita);
+            }
+            return rets.ToArray();
+        }
+        private void deployRangedURLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string all = Clipboard.GetText();
+                txtTmp.Text = all;
+                foreach (string line in txtTmp.Lines)
+                {
+                    string[] deployedlines = getDeployedLines(line);
+                    foreach (string dl in deployedlines)
+                    {
+                        listUrls.Items.Add(dl);
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, Application.ProductName); }
+
+        }
+
 
 
 

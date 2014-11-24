@@ -60,8 +60,8 @@ namespace printurls
             string url = inputdlg.txtUrl.Text;
             if (string.IsNullOrEmpty(url))
             {
-                showerror(printurls.Properties.Resources.NOURL);
-                return;
+                // showerror(printurls.Properties.Resources.NOURL);
+                url = "about:blank";
             }
 
             

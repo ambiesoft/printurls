@@ -46,21 +46,30 @@
             // 
             // wbPrint
             // 
+            this.wbPrint.AccessibleDescription = null;
+            this.wbPrint.AccessibleName = null;
             resources.ApplyResources(this.wbPrint, "wbPrint");
-            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 22);
+            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbPrint.Name = "wbPrint";
             // 
             // btnClose
             // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnClose.AccessibleDescription = null;
+            this.btnClose.AccessibleName = null;
             resources.ApplyResources(this.btnClose, "btnClose");
+            this.btnClose.BackgroundImage = null;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnClose.Font = null;
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // udWait
             // 
+            this.udWait.AccessibleDescription = null;
+            this.udWait.AccessibleName = null;
             resources.ApplyResources(this.udWait, "udWait");
+            this.udWait.Font = null;
             this.udWait.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -75,7 +84,11 @@
             // 
             // chkPause
             // 
+            this.chkPause.AccessibleDescription = null;
+            this.chkPause.AccessibleName = null;
             resources.ApplyResources(this.chkPause, "chkPause");
+            this.chkPause.BackgroundImage = null;
+            this.chkPause.Font = null;
             this.chkPause.Name = "chkPause";
             this.chkPause.UseVisualStyleBackColor = true;
             // 
@@ -86,30 +99,48 @@
             // 
             // progMain
             // 
+            this.progMain.AccessibleDescription = null;
+            this.progMain.AccessibleName = null;
             resources.ApplyResources(this.progMain, "progMain");
+            this.progMain.BackgroundImage = null;
+            this.progMain.Font = null;
             this.progMain.Name = "progMain";
             // 
             // statusMain
             // 
+            this.statusMain.AccessibleDescription = null;
+            this.statusMain.AccessibleName = null;
+            resources.ApplyResources(this.statusMain, "statusMain");
+            this.statusMain.BackgroundImage = null;
+            this.statusMain.Font = null;
             this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slBrowser,
             this.slStatus});
-            resources.ApplyResources(this.statusMain, "statusMain");
             this.statusMain.Name = "statusMain";
             // 
             // slBrowser
             // 
-            this.slBrowser.Name = "slBrowser";
+            this.slBrowser.AccessibleDescription = null;
+            this.slBrowser.AccessibleName = null;
             resources.ApplyResources(this.slBrowser, "slBrowser");
+            this.slBrowser.BackgroundImage = null;
+            this.slBrowser.Name = "slBrowser";
             // 
             // slStatus
             // 
-            this.slStatus.Name = "slStatus";
+            this.slStatus.AccessibleDescription = null;
+            this.slStatus.AccessibleName = null;
             resources.ApplyResources(this.slStatus, "slStatus");
+            this.slStatus.BackgroundImage = null;
+            this.slStatus.Name = "slStatus";
             // 
             // btnPrintAndGoNext
             // 
+            this.btnPrintAndGoNext.AccessibleDescription = null;
+            this.btnPrintAndGoNext.AccessibleName = null;
             resources.ApplyResources(this.btnPrintAndGoNext, "btnPrintAndGoNext");
+            this.btnPrintAndGoNext.BackgroundImage = null;
+            this.btnPrintAndGoNext.Font = null;
             this.btnPrintAndGoNext.Name = "btnPrintAndGoNext";
             this.btnPrintAndGoNext.UseVisualStyleBackColor = true;
             this.btnPrintAndGoNext.Click += new System.EventHandler(this.btnPrintAndGoNext_Click);
@@ -117,8 +148,11 @@
             // FormPrint
             // 
             this.AcceptButton = this.btnClose;
+            this.AccessibleDescription = null;
+            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = null;
             this.Controls.Add(this.btnPrintAndGoNext);
             this.Controls.Add(this.statusMain);
             this.Controls.Add(this.progMain);
@@ -126,6 +160,7 @@
             this.Controls.Add(this.udWait);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.wbPrint);
+            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormPrint";
