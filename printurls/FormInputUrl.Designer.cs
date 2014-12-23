@@ -37,60 +37,42 @@
             // 
             // txtUrl
             // 
-            this.txtUrl.AccessibleDescription = null;
-            this.txtUrl.AccessibleName = null;
             resources.ApplyResources(this.txtUrl, "txtUrl");
-            this.txtUrl.BackgroundImage = null;
-            this.txtUrl.Font = null;
             this.txtUrl.Name = "txtUrl";
             // 
             // btnStart
             // 
-            this.btnStart.AccessibleDescription = null;
-            this.btnStart.AccessibleName = null;
-            resources.ApplyResources(this.btnStart, "btnStart");
-            this.btnStart.BackgroundImage = null;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnStart.Font = null;
+            resources.ApplyResources(this.btnStart, "btnStart");
             this.btnStart.Name = "btnStart";
             this.btnStart.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
-            this.btnCancel.AccessibleDescription = null;
-            this.btnCancel.AccessibleName = null;
-            resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackgroundImage = null;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Font = null;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
             resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
             this.label1.Name = "label1";
             // 
             // FormInputUrl
             // 
             this.AcceptButton = this.btnStart;
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = null;
             this.CancelButton = this.btnCancel;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtUrl);
-            this.Font = null;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormInputUrl";
+            this.Load += new System.EventHandler(this.FormInputUrl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

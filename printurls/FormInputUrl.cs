@@ -14,5 +14,14 @@ namespace printurls
         {
             InitializeComponent();
         }
+
+        private void FormInputUrl_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                txtUrl.Text = Clipboard.GetText();
+            }
+            catch (Exception) { }
+        }
     }
 }
