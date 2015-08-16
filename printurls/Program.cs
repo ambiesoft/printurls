@@ -30,8 +30,16 @@ namespace printurls
                     return false;
 
                 string exename = System.IO.Path.GetFileName(System.Windows.Forms.Application.ExecutablePath);
-                regKey.SetValue(exename, ieversion, Microsoft.Win32.RegistryValueKind.DWord);
 
+                if (ieversion == -1)
+                {
+                    regKey.DeleteValue(exename);
+                }
+                else
+                {
+                    int v = ieversion * 1000;
+                    regKey.SetValue(exename, v, Microsoft.Win32.RegistryValueKind.DWord);
+                }
                 return true;
             }
             catch (Exception) { }
