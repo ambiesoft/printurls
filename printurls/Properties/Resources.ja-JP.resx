@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AreYouSureToQuit" xml:space="preserve">
+    <value>アプリケーションを終了しますか？</value>
+  </data>
   <data name="DONE" xml:space="preserve">
-    <value>syuuryou</value>
+    <value>終了しました</value>
+  </data>
+  <data name="NOURL" xml:space="preserve">
+    <value>URLがありません</value>
+  </data>
+  <data name="PAUSED" xml:space="preserve">
+    <value>一時停止中</value>
+  </data>
+  <data name="PRINTING" xml:space="preserve">
+    <value>プリントしています・・・</value>
   </data>
 </root>

@@ -37,6 +37,14 @@ namespace printurls
         private void btnClose_Click(object sender, EventArgs e)
         {
             //_closing = true;
+            if (DialogResult.Yes != MessageBox.Show(Properties.Resources.AreYouSureToQuit,
+                Application.ProductName,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2))
+            {
+                return;
+            }
             Close();
         }
 
@@ -115,7 +123,11 @@ namespace printurls
 
                 if (_curIndex >= _urls.Count)
                 {
-                    MessageBox.Show(this, Properties.Resources.DONE);
+                    MessageBox.Show(this, 
+                        Properties.Resources.DONE,
+                        Application.ProductName,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     Close();
                     return;
                 }
