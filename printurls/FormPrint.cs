@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Printing;
+using System.Drawing.Printing;
 
 namespace printurls
 {
@@ -21,9 +23,13 @@ namespace printurls
             slBrowser.Text = wbPrint.StatusText;
         }
         internal List<string> _urls = null;
+
         
         private void FormPrint_Load(object sender, EventArgs e)
         {
+ 
+
+
             progMain.Maximum = _urls.Count;
             basicTimer.Enabled = true;
         }
@@ -62,6 +68,9 @@ namespace printurls
 
             if (inprocess)
                 return;
+
+            //if (PrinterStatus.IsBusy())
+                //return;
 
             if (_waitCounter > 0)
             {
