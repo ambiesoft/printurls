@@ -120,6 +120,9 @@
   <data name="AreYouSureToQuit" xml:space="preserve">
     <value>Are you sure to quit?</value>
   </data>
+  <data name="CancelCompleteCheck" xml:space="preserve">
+    <value>Complete check has not finished in 10 seconds. Are you cancel Complete Check?</value>
+  </data>
   <data name="DONE" xml:space="preserve">
     <value>Done.</value>
   </data>

@@ -31,9 +31,27 @@ namespace printurls
         
         void ExtractLinks(bool bOnlySelected)
         {
+            DateTime start = DateTime.Now;
             while (wbBase.ReadyState != WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
+                TimeSpan ts = DateTime.Now.Subtract(start);
+                if (ts.Seconds > 10)
+                {
+                    switch (MessageBox.Show(Properties.Resources.CancelCompleteCheck,
+                        Application.ProductName,
+                        MessageBoxButtons.YesNoCancel,
+                        MessageBoxIcon.Question))
+                    {
+                        case DialogResult.No:
+                            start = DateTime.Now;
+                            continue;
+
+                        case DialogResult.Cancel:
+                            return;
+                    }
+                    break;
+                }
             }
 
             if (bOnlySelected)

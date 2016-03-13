@@ -120,6 +120,9 @@
   <data name="AreYouSureToQuit" xml:space="preserve">
     <value>アプリケーションを終了しますか？</value>
   </data>
+  <data name="CancelCompleteCheck" xml:space="preserve">
+    <value>完了チェックが１０秒間のうちに終了しませんでした。完了チェックをキャンセルしますか？</value>
+  </data>
   <data name="DONE" xml:space="preserve">
     <value>終了しました</value>
   </data>
