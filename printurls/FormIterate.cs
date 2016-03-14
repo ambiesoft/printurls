@@ -32,7 +32,7 @@ namespace printurls
         void ExtractLinks(bool bOnlySelected)
         {
             DateTime start = DateTime.Now;
-            while (wbBase.ReadyState != WebBrowserReadyState.Complete)
+            while (wbBase.ReadyState != WebBrowserReadyState.Interactive)
             {
                 Application.DoEvents();
                 TimeSpan ts = DateTime.Now.Subtract(start);
