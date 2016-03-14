@@ -52,7 +52,7 @@ namespace printurls
         void waitBrowser()
         {
             btnPrintAndGoNext.Enabled = true;
-            while (wbPrint.ReadyState != WebBrowserReadyState.Complete)
+            while (wbPrint.ReadyState != WebBrowserReadyState.Interactive)
             {
                 Application.DoEvents();
                 if (_forcenext)
