@@ -61,8 +61,8 @@ namespace printurls
         PrintQueue pq_;
         private void initPrinter()
         {
-            if (pq_ != null)
-                return;
+            //if (pq_ != null)
+            //    return;
 
             LocalPrintServer lps = new LocalPrintServer();
             PrintQueueCollection queueCollection = lps.GetPrintQueues();
