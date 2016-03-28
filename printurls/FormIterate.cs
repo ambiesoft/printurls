@@ -16,6 +16,7 @@ namespace printurls
             InitializeComponent();
             Program.commonwb(wbBase);
             wbBase.StatusTextChanged += new EventHandler(wbBase_StatusTextChanged);
+            Application.Idle += new EventHandler(Application_Idle);
         }
         private void wbBase_StatusTextChanged(object sender, EventArgs e)
         {
@@ -23,6 +24,13 @@ namespace printurls
         }
         internal string _url;
 
+        private void Application_Idle(Object sender, EventArgs e)
+        {
+            if (listUrls.Created && !listUrls.IsDisposed)
+            {
+                slMain.Text = listUrls.Items.Count.ToString();
+            }
+        }
         private void FormIterate_Load(object sender, EventArgs e)
         {
             // BeginInvoke(new dele(doit));
