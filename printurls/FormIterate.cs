@@ -9,6 +9,7 @@ using mshtml;
 
 namespace printurls
 {
+
     public partial class FormIterate : Form
     {
         public FormIterate()
@@ -39,86 +40,88 @@ namespace printurls
         
         void ExtractLinks(bool bOnlySelected)
         {
-            DateTime start = DateTime.Now;
-            while (wbBase.ReadyState < WebBrowserReadyState.Interactive)
+            using (new WaitCursor())
             {
-                Application.DoEvents();
-                TimeSpan ts = DateTime.Now.Subtract(start);
-                if (ts.Seconds > 10)
+                DateTime start = DateTime.Now;
+                while (wbBase.ReadyState < WebBrowserReadyState.Interactive)
                 {
-                    switch (MessageBox.Show(Properties.Resources.CancelCompleteCheck,
-                        Application.ProductName,
-                        MessageBoxButtons.YesNoCancel,
-                        MessageBoxIcon.Question))
+                    Application.DoEvents();
+                    TimeSpan ts = DateTime.Now.Subtract(start);
+                    if (ts.Seconds > 10)
                     {
-                        case DialogResult.No:
-                            start = DateTime.Now;
-                            continue;
+                        switch (MessageBox.Show(Properties.Resources.CancelCompleteCheck,
+                            Application.ProductName,
+                            MessageBoxButtons.YesNoCancel,
+                            MessageBoxIcon.Question))
+                        {
+                            case DialogResult.No:
+                                start = DateTime.Now;
+                                continue;
 
-                        case DialogResult.Cancel:
-                            return;
-                    }
-                    break;
-                }
-            }
-
-            if (bOnlySelected)
-            {
-                try
-                {
-                    IHTMLDocument2 htmlDocument = wbBase.Document.DomDocument as IHTMLDocument2;
-                    if (htmlDocument == null)
-                        throw new Exception("No htmlDocument");
-
-                    IHTMLSelectionObject currentSelection = htmlDocument.selection;
-                    if (currentSelection == null)
-                        throw new Exception("No Selection");
-
-                    //if (currentSelection.type == "Text")
-                    //    throw new Exception("No Links in the selection");
-
-                    //if(currentSelection.type!="Control")
-                    //    throw new Exception("No Links in the selection");
-
-
-                    IHTMLTxtRange range = currentSelection.createRange() as IHTMLTxtRange;
-                    if(range==null)
-                        throw new Exception("No Links in the selection");
-
-                    string html = range.htmlText;
-                    if(string.IsNullOrEmpty(html))
-                        throw new Exception("No Links in the selection");
-
-                    Uri baseurl = wbBase.Url;
-                    HtmlAgilityPack.HtmlDocument adoc = new HtmlAgilityPack.HtmlDocument();
-                    adoc.LoadHtml(html);
-                    foreach ( HtmlAgilityPack.HtmlNode link in adoc.DocumentNode.SelectNodes("//a[@href]"))
-                    {
-                        Uri u = new Uri(baseurl, link.Attributes["href"].Value.ToString());
-                        listUrls.Items.Add(u.AbsoluteUri);
+                            case DialogResult.Cancel:
+                                return;
+                        }
+                        break;
                     }
                 }
-                catch (Exception ex)
+
+                if (bOnlySelected)
                 {
-                    MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-            }
-            else
-            {
-                HtmlDocument doc = wbBase.Document;
-                Dictionary<string, int> tagcounter = new Dictionary<string, int>();
-                List<string> urls = new List<string>();
-                foreach (HtmlElement elm in doc.All)
-                {
-                    if (elm.TagName == "a" || elm.TagName == "A")
+                    try
                     {
-                        string url = elm.GetAttribute("href");
-                        urls.Add(url);
-                        listUrls.Items.Add(url);
+                        IHTMLDocument2 htmlDocument = wbBase.Document.DomDocument as IHTMLDocument2;
+                        if (htmlDocument == null)
+                            throw new Exception("No htmlDocument");
+
+                        IHTMLSelectionObject currentSelection = htmlDocument.selection;
+                        if (currentSelection == null)
+                            throw new Exception("No Selection");
+
+                        //if (currentSelection.type == "Text")
+                        //    throw new Exception("No Links in the selection");
+
+                        //if(currentSelection.type!="Control")
+                        //    throw new Exception("No Links in the selection");
+
+
+                        IHTMLTxtRange range = currentSelection.createRange() as IHTMLTxtRange;
+                        if (range == null)
+                            throw new Exception("No Links in the selection");
+
+                        string html = range.htmlText;
+                        if (string.IsNullOrEmpty(html))
+                            throw new Exception("No Links in the selection");
+
+                        Uri baseurl = wbBase.Url;
+                        HtmlAgilityPack.HtmlDocument adoc = new HtmlAgilityPack.HtmlDocument();
+                        adoc.LoadHtml(html);
+                        foreach (HtmlAgilityPack.HtmlNode link in adoc.DocumentNode.SelectNodes("//a[@href]"))
+                        {
+                            Uri u = new Uri(baseurl, link.Attributes["href"].Value.ToString());
+                            listUrls.Items.Add(u.AbsoluteUri);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                }
+                else
+                {
+                    HtmlDocument doc = wbBase.Document;
+                    Dictionary<string, int> tagcounter = new Dictionary<string, int>();
+                    List<string> urls = new List<string>();
+                    foreach (HtmlElement elm in doc.All)
+                    {
+                        if (elm.TagName == "a" || elm.TagName == "A")
+                        {
+                            string url = elm.GetAttribute("href");
+                            urls.Add(url);
+                            listUrls.Items.Add(url);
+                        }
                     }
                 }
             }
- 
         }
 
         string getUnhashUrl(Uri u)
@@ -301,4 +304,24 @@ namespace printurls
 
    
     }
+
+    class WaitCursor : IDisposable
+    {
+        //private Form f_;
+        private Cursor org_;
+        internal WaitCursor()
+        {
+            // f_ = f;
+            // org_ = Application.UseWaitCursor;
+            // Application.UseWaitCursor = true;
+            org_ = Cursor.Current;
+            Cursor.Current = Cursors.WaitCursor;
+        }
+
+        public void Dispose()
+        {
+            Cursor.Current = org_;
+        }
+    }
+
 }

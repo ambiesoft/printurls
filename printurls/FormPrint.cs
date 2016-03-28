@@ -45,13 +45,33 @@ namespace printurls
         void waitBrowser()
         {
             btnPrintAndGoNext.Enabled = true;
-            while (wbPrint.ReadyState < WebBrowserReadyState.Interactive)
+            int start = Environment.TickCount;
+            bool failed = false;
+            while (wbPrint.ReadyState < WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
                 if (_forcenext)
                 {
                     _forcenext = false;
                     break;
+                }
+                if ((Environment.TickCount - start) > 30 * 1000)
+                {
+                    failed = true;
+                    break;
+                }
+            }
+
+            if (failed)
+            {
+                while (wbPrint.ReadyState < WebBrowserReadyState.Interactive)
+                {
+                    Application.DoEvents();
+                    if (_forcenext)
+                    {
+                        _forcenext = false;
+                        break;
+                    }
                 }
             }
             btnPrintAndGoNext.Enabled = false;
