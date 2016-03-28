@@ -37,14 +37,7 @@ namespace printurls
         private void btnClose_Click(object sender, EventArgs e)
         {
             //_closing = true;
-            if (DialogResult.Yes != MessageBox.Show(Properties.Resources.AreYouSureToQuit,
-                Application.ProductName,
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button2))
-            {
-                return;
-            }
+
             Close();
         }
 
@@ -64,6 +57,40 @@ namespace printurls
             btnPrintAndGoNext.Enabled = false;
         }
 
+
+        PrintQueue pq_;
+        private void initPrinter()
+        {
+            if (pq_ != null)
+                return;
+
+            LocalPrintServer lps = new LocalPrintServer();
+            PrintQueueCollection queueCollection = lps.GetPrintQueues();
+
+            
+            PrinterSettings settings = new PrinterSettings();
+            if (settings == null)
+                return;
+
+            string defprinter = settings.PrinterName;
+
+            foreach (PrintQueue pq in queueCollection)
+            {
+                if (pq.FullName == defprinter)
+                {
+                    pq_ = pq;
+                    return;
+                }
+            }
+        }
+        
+        private int GetNumberOfPrintJobs()
+        {
+            initPrinter();
+            return pq_ == null ? 0 : pq_.NumberOfJobs;
+        }
+
+        
         int _curIndex = 0;
         static bool inprocess = false;
         int _waitCounter=0;
@@ -77,9 +104,6 @@ namespace printurls
             if (inprocess)
                 return;
 
-            //if (PrinterStatus.IsBusy())
-                //return;
-
             if (_waitCounter > 0)
             {
                 slStatus.Text = _waitCounter.ToString();
@@ -88,6 +112,11 @@ namespace printurls
                 return;
             }
 
+            if (GetNumberOfPrintJobs() != 0)
+            {
+                slStatus.Text = Properties.Resources.PRINTERISBUSY;
+                return;
+            }
 
             if (chkPause.Checked)
             {
@@ -145,6 +174,24 @@ namespace printurls
         private void btnPrintAndGoNext_Click(object sender, EventArgs e)
         {
             _forcenext = true;
+        }
+
+        private void wbPrint_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            txtUrl.Text = wbPrint.Url.AbsoluteUri;
+        }
+
+        private void FormPrint_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult.Yes != MessageBox.Show(Properties.Resources.AreYouSureToQuit,
+                Application.ProductName,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2))
+            {
+                e.Cancel = true;
+                return;
+            }
         }
     }
 }

@@ -40,35 +40,28 @@
             this.slBrowser = new System.Windows.Forms.ToolStripStatusLabel();
             this.slStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnPrintAndGoNext = new System.Windows.Forms.Button();
+            this.txtUrl = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.udWait)).BeginInit();
             this.statusMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // wbPrint
             // 
-            this.wbPrint.AccessibleDescription = null;
-            this.wbPrint.AccessibleName = null;
             resources.ApplyResources(this.wbPrint, "wbPrint");
-            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 22);
             this.wbPrint.Name = "wbPrint";
+            this.wbPrint.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbPrint_Navigated);
             // 
             // btnClose
             // 
-            this.btnClose.AccessibleDescription = null;
-            this.btnClose.AccessibleName = null;
             resources.ApplyResources(this.btnClose, "btnClose");
-            this.btnClose.BackgroundImage = null;
-            this.btnClose.Font = null;
             this.btnClose.Name = "btnClose";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // udWait
             // 
-            this.udWait.AccessibleDescription = null;
-            this.udWait.AccessibleName = null;
             resources.ApplyResources(this.udWait, "udWait");
-            this.udWait.Font = null;
             this.udWait.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -83,11 +76,7 @@
             // 
             // chkPause
             // 
-            this.chkPause.AccessibleDescription = null;
-            this.chkPause.AccessibleName = null;
             resources.ApplyResources(this.chkPause, "chkPause");
-            this.chkPause.BackgroundImage = null;
-            this.chkPause.Font = null;
             this.chkPause.Name = "chkPause";
             this.chkPause.UseVisualStyleBackColor = true;
             // 
@@ -98,59 +87,45 @@
             // 
             // progMain
             // 
-            this.progMain.AccessibleDescription = null;
-            this.progMain.AccessibleName = null;
             resources.ApplyResources(this.progMain, "progMain");
-            this.progMain.BackgroundImage = null;
-            this.progMain.Font = null;
             this.progMain.Name = "progMain";
             // 
             // statusMain
             // 
-            this.statusMain.AccessibleDescription = null;
-            this.statusMain.AccessibleName = null;
-            resources.ApplyResources(this.statusMain, "statusMain");
-            this.statusMain.BackgroundImage = null;
-            this.statusMain.Font = null;
             this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slBrowser,
             this.slStatus});
+            resources.ApplyResources(this.statusMain, "statusMain");
             this.statusMain.Name = "statusMain";
             // 
             // slBrowser
             // 
-            this.slBrowser.AccessibleDescription = null;
-            this.slBrowser.AccessibleName = null;
-            resources.ApplyResources(this.slBrowser, "slBrowser");
-            this.slBrowser.BackgroundImage = null;
             this.slBrowser.Name = "slBrowser";
+            resources.ApplyResources(this.slBrowser, "slBrowser");
             // 
             // slStatus
             // 
-            this.slStatus.AccessibleDescription = null;
-            this.slStatus.AccessibleName = null;
-            resources.ApplyResources(this.slStatus, "slStatus");
-            this.slStatus.BackgroundImage = null;
             this.slStatus.Name = "slStatus";
+            resources.ApplyResources(this.slStatus, "slStatus");
             // 
             // btnPrintAndGoNext
             // 
-            this.btnPrintAndGoNext.AccessibleDescription = null;
-            this.btnPrintAndGoNext.AccessibleName = null;
             resources.ApplyResources(this.btnPrintAndGoNext, "btnPrintAndGoNext");
-            this.btnPrintAndGoNext.BackgroundImage = null;
-            this.btnPrintAndGoNext.Font = null;
             this.btnPrintAndGoNext.Name = "btnPrintAndGoNext";
             this.btnPrintAndGoNext.UseVisualStyleBackColor = true;
             this.btnPrintAndGoNext.Click += new System.EventHandler(this.btnPrintAndGoNext_Click);
             // 
+            // txtUrl
+            // 
+            resources.ApplyResources(this.txtUrl, "txtUrl");
+            this.txtUrl.Name = "txtUrl";
+            this.txtUrl.ReadOnly = true;
+            // 
             // FormPrint
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = null;
+            this.Controls.Add(this.txtUrl);
             this.Controls.Add(this.btnPrintAndGoNext);
             this.Controls.Add(this.statusMain);
             this.Controls.Add(this.progMain);
@@ -158,11 +133,10 @@
             this.Controls.Add(this.udWait);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.wbPrint);
-            this.Font = null;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormPrint";
             this.Load += new System.EventHandler(this.FormPrint_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrint_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.udWait)).EndInit();
             this.statusMain.ResumeLayout(false);
             this.statusMain.PerformLayout();
@@ -183,5 +157,6 @@
         private System.Windows.Forms.ToolStripStatusLabel slBrowser;
         private System.Windows.Forms.ToolStripStatusLabel slStatus;
         private System.Windows.Forms.Button btnPrintAndGoNext;
+        private System.Windows.Forms.TextBox txtUrl;
     }
 }

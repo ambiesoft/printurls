@@ -132,6 +132,9 @@
   <data name="PAUSED" xml:space="preserve">
     <value>Paused</value>
   </data>
+  <data name="PRINTERISBUSY" xml:space="preserve">
+    <value>Printer is busy</value>
+  </data>
   <data name="PRINTING" xml:space="preserve">
     <value>printing...</value>
   </data>
