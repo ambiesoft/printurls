@@ -29,7 +29,9 @@ namespace printurls
         {
             if (listUrls.Created && !listUrls.IsDisposed)
             {
-                slMain.Text = listUrls.Items.Count.ToString();
+                string format = "{0} Items";
+
+                slItemCount.Text = string.Format(format, listUrls.Items.Count);
             }
         }
         private void FormIterate_Load(object sender, EventArgs e)

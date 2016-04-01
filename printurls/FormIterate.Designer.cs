@@ -36,16 +36,17 @@
             this.tsExtract = new System.Windows.Forms.ToolStrip();
             this.tsbExtractAllLinks = new System.Windows.Forms.ToolStripButton();
             this.tsbExtractSelectedLinks = new System.Windows.Forms.ToolStripButton();
+            this.tssbInsertURLs = new System.Windows.Forms.ToolStripSplitButton();
+            this.deployRangedURLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spRoot = new System.Windows.Forms.SplitContainer();
+            this.txtTmp = new System.Windows.Forms.TextBox();
             this.btnUnique = new System.Windows.Forms.Button();
             this.btnPrintAll = new System.Windows.Forms.Button();
             this.btnRemoveItem = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
-            this.tssbInsertURLs = new System.Windows.Forms.ToolStripSplitButton();
-            this.deployRangedURLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtTmp = new System.Windows.Forms.TextBox();
+            this.slItemCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
             this.spWebList.SuspendLayout();
@@ -115,6 +116,21 @@
             this.tsbExtractSelectedLinks.Name = "tsbExtractSelectedLinks";
             this.tsbExtractSelectedLinks.Click += new System.EventHandler(this.tsbExtractSelectedLinks_Click);
             // 
+            // tssbInsertURLs
+            // 
+            this.tssbInsertURLs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tssbInsertURLs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deployRangedURLToolStripMenuItem});
+            resources.ApplyResources(this.tssbInsertURLs, "tssbInsertURLs");
+            this.tssbInsertURLs.Name = "tssbInsertURLs";
+            this.tssbInsertURLs.ButtonClick += new System.EventHandler(this.tssbInsertURLs_ButtonClick);
+            // 
+            // deployRangedURLToolStripMenuItem
+            // 
+            this.deployRangedURLToolStripMenuItem.Name = "deployRangedURLToolStripMenuItem";
+            resources.ApplyResources(this.deployRangedURLToolStripMenuItem, "deployRangedURLToolStripMenuItem");
+            this.deployRangedURLToolStripMenuItem.Click += new System.EventHandler(this.deployRangedURLToolStripMenuItem_Click);
+            // 
             // spRoot
             // 
             resources.ApplyResources(this.spRoot, "spRoot");
@@ -132,6 +148,11 @@
             this.spRoot.Panel2.Controls.Add(this.btnPrintAll);
             this.spRoot.Panel2.Controls.Add(this.btnRemoveItem);
             this.spRoot.Panel2.Controls.Add(this.btnCancel);
+            // 
+            // txtTmp
+            // 
+            resources.ApplyResources(this.txtTmp, "txtTmp");
+            this.txtTmp.Name = "txtTmp";
             // 
             // btnUnique
             // 
@@ -165,7 +186,8 @@
             // statusMain
             // 
             this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.slMain});
+            this.slMain,
+            this.slItemCount});
             resources.ApplyResources(this.statusMain, "statusMain");
             this.statusMain.Name = "statusMain";
             // 
@@ -174,25 +196,10 @@
             this.slMain.Name = "slMain";
             resources.ApplyResources(this.slMain, "slMain");
             // 
-            // tssbInsertURLs
+            // slItemCount
             // 
-            this.tssbInsertURLs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tssbInsertURLs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.deployRangedURLToolStripMenuItem});
-            resources.ApplyResources(this.tssbInsertURLs, "tssbInsertURLs");
-            this.tssbInsertURLs.Name = "tssbInsertURLs";
-            this.tssbInsertURLs.ButtonClick += new System.EventHandler(this.tssbInsertURLs_ButtonClick);
-            // 
-            // deployRangedURLToolStripMenuItem
-            // 
-            this.deployRangedURLToolStripMenuItem.Name = "deployRangedURLToolStripMenuItem";
-            resources.ApplyResources(this.deployRangedURLToolStripMenuItem, "deployRangedURLToolStripMenuItem");
-            this.deployRangedURLToolStripMenuItem.Click += new System.EventHandler(this.deployRangedURLToolStripMenuItem_Click);
-            // 
-            // txtTmp
-            // 
-            resources.ApplyResources(this.txtTmp, "txtTmp");
-            this.txtTmp.Name = "txtTmp";
+            this.slItemCount.Name = "slItemCount";
+            resources.ApplyResources(this.slItemCount, "slItemCount");
             // 
             // FormIterate
             // 
@@ -240,6 +247,7 @@
         private System.Windows.Forms.ToolStripSplitButton tssbInsertURLs;
         private System.Windows.Forms.ToolStripMenuItem deployRangedURLToolStripMenuItem;
         private System.Windows.Forms.TextBox txtTmp;
+        private System.Windows.Forms.ToolStripStatusLabel slItemCount;
     }
 }
 
