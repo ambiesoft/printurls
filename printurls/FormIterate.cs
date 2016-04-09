@@ -197,11 +197,13 @@ namespace printurls
         private void tsbExtractAllLinks_Click(object sender, EventArgs e)
         {
             ExtractLinks(false);
+            listUrls.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void tsbExtractSelectedLinks_Click(object sender, EventArgs e)
         {
             ExtractLinks(true);
+            listUrls.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
         }
 
         private void tssbInsertURLs_ButtonClick(object sender, EventArgs e)
