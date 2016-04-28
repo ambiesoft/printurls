@@ -192,6 +192,12 @@ namespace printurls
             {
                 _retresult.Add(item.Text);
             }
+            
+            if(_retresult.Count==0)
+            {
+                Program.showerror(printurls.Properties.Resources.NOURL);
+                this.DialogResult=DialogResult.None;
+            }
         }
 
         private void tsbExtractAllLinks_Click(object sender, EventArgs e)

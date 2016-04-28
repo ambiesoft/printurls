@@ -11,7 +11,7 @@ namespace printurls
             wb.ScriptErrorsSuppressed = true;
 
         }
-        static void showerror(string err)
+        internal static void showerror(string err)
         {
             MessageBox.Show(err,
                 Application.ProductName,
