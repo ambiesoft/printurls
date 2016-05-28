@@ -5,6 +5,8 @@ using System.Text;
 using System.Printing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using Ambiesoft;
+
 namespace printurls
 {
     class PrinterStatus
@@ -22,7 +24,8 @@ namespace printurls
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,
+                MessageBox.Show(
+                    ex.Message,
                     Application.ProductName,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);

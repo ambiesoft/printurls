@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Printing;
 using System.Drawing.Printing;
+using Ambiesoft;
 
 namespace printurls
 {
@@ -172,7 +173,7 @@ namespace printurls
 
                 if (_curIndex >= _urls.Count)
                 {
-                    MessageBox.Show(this, 
+                    CenteredMessageBox.Show(this, 
                         Properties.Resources.DONE,
                         Application.ProductName,
                         MessageBoxButtons.OK,
@@ -183,7 +184,7 @@ namespace printurls
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                CenteredMessageBox.Show(this, ex.Message);
             }
             finally
             {
@@ -203,7 +204,8 @@ namespace printurls
 
         private void FormPrint_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (DialogResult.Yes != MessageBox.Show(Properties.Resources.AreYouSureToQuit,
+            if (DialogResult.Yes != CenteredMessageBox.Show(this,
+                Properties.Resources.AreYouSureToQuit,
                 Application.ProductName,
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question,

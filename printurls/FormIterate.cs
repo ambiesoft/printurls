@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using mshtml;
+using Ambiesoft;
 
 namespace printurls
 {
@@ -51,7 +52,8 @@ namespace printurls
                     TimeSpan ts = DateTime.Now.Subtract(start);
                     if (ts.Seconds > 10)
                     {
-                        switch (Ambiesoft.CenteredMessageBox.Show(Properties.Resources.CancelCompleteCheck,
+                        switch (CenteredMessageBox.Show(this,
+                            Properties.Resources.CancelCompleteCheck,
                             Application.ProductName,
                             MessageBoxButtons.YesNoCancel,
                             MessageBoxIcon.Question))
@@ -105,7 +107,11 @@ namespace printurls
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        CenteredMessageBox.Show(this,
+                            ex.Message,
+                            Application.ProductName,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Asterisk);
                     }
                 }
                 else
@@ -223,7 +229,7 @@ namespace printurls
                     listUrls.Items.Add(line);
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, Application.ProductName); }
+            catch (Exception ex) { CenteredMessageBox.Show(this, ex.Message, Application.ProductName); }
 
 
         }
@@ -305,7 +311,7 @@ namespace printurls
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, Application.ProductName); }
+            catch (Exception ex) { CenteredMessageBox.Show(this, ex.Message, Application.ProductName); }
 
         }
 
