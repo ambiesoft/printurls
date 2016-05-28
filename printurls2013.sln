@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "printurls2013", "printurls\printurls2013.csproj", "{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragNDrop2013", "DragAndDropListView\DragNDrop2013.csproj", "{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

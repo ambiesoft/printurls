@@ -51,7 +51,7 @@ namespace printurls
                     TimeSpan ts = DateTime.Now.Subtract(start);
                     if (ts.Seconds > 10)
                     {
-                        switch (MessageBox.Show(Properties.Resources.CancelCompleteCheck,
+                        switch (Ambiesoft.CenteredMessageBox.Show(Properties.Resources.CancelCompleteCheck,
                             Application.ProductName,
                             MessageBoxButtons.YesNoCancel,
                             MessageBoxIcon.Question))
