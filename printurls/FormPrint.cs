@@ -78,6 +78,18 @@ namespace printurls
             btnPrintAndGoNext.Enabled = false;
         }
 
+        void waitSimple(int sec)
+        {
+            int start = Environment.TickCount;
+            while(true)
+            {
+                Application.DoEvents();
+                if((Environment.TickCount-start) > (sec*1000))
+                {
+                    break;
+                }
+            }
+        }
 
         PrintQueue pq_;
         private void initPrinter()
@@ -161,6 +173,7 @@ namespace printurls
                     return;
 
                 slStatus.Text = Properties.Resources.PRINTING;
+                waitSimple(decimal.ToInt32(udPrintWait.Value));
                 wbPrint.Print();
                 slStatus.Text = "";
 
