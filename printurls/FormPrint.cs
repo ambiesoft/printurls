@@ -186,6 +186,7 @@ namespace printurls
 
                 if (_curIndex >= _urls.Count)
                 {
+                    this.Focus();
                     CenteredMessageBox.Show(this, 
                         Properties.Resources.DONE,
                         Application.ProductName,
