@@ -51,7 +51,7 @@
             // wbPrint
             // 
             resources.ApplyResources(this.wbPrint, "wbPrint");
-            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 22);
             this.wbPrint.Name = "wbPrint";
             this.wbPrint.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbPrint_Navigated);
             // 
