@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Ambiesoft;
 
 namespace printurls
 {
@@ -37,6 +38,7 @@ namespace printurls
         {
             txtPageUrl.Enabled = radioOpenUrl.Checked;
             txtEnterURLs.Enabled = !radioOpenUrl.Checked;
+            btnExpand.Enabled = !radioOpenUrl.Checked;
         }
 
         private void radioOpenUrl_CheckedChanged(object sender, EventArgs e)
@@ -102,16 +104,7 @@ namespace printurls
             return result.ToArray();
         }
 
-        public bool IsResultOpenURL;
-        public string[] ResultURLs;
-        private void btnStart_Click(object sender, EventArgs e)
-        {
-            IsResultOpenURL = radioOpenUrl.Checked;
-            if (IsResultOpenURL)
-                return;
 
-            ResultURLs = txtEnterURLs.Lines;
-        }
 
         private void btnExpand_Click(object sender, EventArgs e)
         {
@@ -128,5 +121,35 @@ namespace printurls
             }
             txtEnterURLs.Text = sb.ToString();
         }
+
+
+        public bool IsResultOpenURL;
+        public string[] ResultURLs;
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            IsResultOpenURL = radioOpenUrl.Checked;
+            if (IsResultOpenURL)
+                return;
+
+
+            ResultURLs = txtEnterURLs.Lines;
+            foreach (string u in ResultURLs)
+            {
+                if (u.IndexOf('[') >= 0 && u.IndexOf(']') >= 0)
+                {
+                    if (DialogResult.Yes != CenteredMessageBox.Show(this,
+                        Properties.Resources.URL_INCLUDES_BLANCKET_CONTINUE,
+                        Application.ProductName,
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button2))
+                    {
+                        DialogResult = DialogResult.None;
+                        return;
+                    }
+                }
+            }
+        }
+
     }
 }

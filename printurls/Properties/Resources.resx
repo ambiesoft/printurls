@@ -126,6 +126,9 @@
   <data name="DONE" xml:space="preserve">
     <value>Done.</value>
   </data>
+  <data name="INTERVAL_WAIT" xml:space="preserve">
+    <value>Interval Wait: </value>
+  </data>
   <data name="NOURL" xml:space="preserve">
     <value>No Urls</value>
   </data>
@@ -137,5 +140,8 @@
   </data>
   <data name="PRINTING" xml:space="preserve">
     <value>printing...</value>
+  </data>
+  <data name="URL_INCLUDES_BLANCKET_CONTINUE" xml:space="preserve">
+    <value>Entered URL includes '[' and ']'. Do you want to continue?</value>
   </data>
 </root>

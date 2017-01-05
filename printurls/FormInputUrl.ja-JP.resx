@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 336</value>
+    <value>293, 336</value>
   </data>
   <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 23</value>
@@ -128,7 +128,7 @@
     <value>スタート(&amp;S)</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 336</value>
+    <value>405, 336</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>106, 23</value>

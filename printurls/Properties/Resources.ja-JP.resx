@@ -126,6 +126,9 @@
   <data name="DONE" xml:space="preserve">
     <value>終了しました</value>
   </data>
+  <data name="INTERVAL_WAIT" xml:space="preserve">
+    <value>インターバル待機： </value>
+  </data>
   <data name="NOURL" xml:space="preserve">
     <value>URLがありません</value>
   </data>
@@ -134,5 +137,8 @@
   </data>
   <data name="PRINTING" xml:space="preserve">
     <value>プリントしています・・・</value>
+  </data>
+  <data name="URL_INCLUDES_BLANCKET_CONTINUE" xml:space="preserve">
+    <value>URLに[ ]が含まれています。このまま続けますか？</value>
   </data>
 </root>

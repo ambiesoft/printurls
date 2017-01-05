@@ -16,6 +16,7 @@ namespace printurls
         public FormPrint()
         {
             InitializeComponent();
+            this.Size = new Size(this.Size.Width, (int)(this.Size.Height * 1.5));
             Program.commonwb(wbPrint);
             wbPrint.StatusTextChanged += new EventHandler(wbPrint_StatusTextChanged);
         }
@@ -48,7 +49,16 @@ namespace printurls
             btnPrintAndGoNext.Enabled = true;
             int start = Environment.TickCount;
             bool failed = false;
-            while (wbPrint.ReadyState < WebBrowserReadyState.Complete)
+            WebBrowserReadyState curstate = WebBrowserReadyState.Uninitialized;
+            try
+            {
+                curstate = wbPrint.ReadyState;
+            }
+            catch (Exception ex)
+            {
+                slStatus.Text = ex.Message;
+            }
+            while (curstate < WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
                 if (_forcenext)
@@ -128,40 +138,10 @@ namespace printurls
         static bool inprocess = false;
         int _waitCounter=0;
 
-        private void basicTimer_Tick(object sender, EventArgs e)
+        private void DoTimerStaff()
         {
-
-            if (_curIndex >= _urls.Count)
-                return;
-
-            if (inprocess)
-                return;
-
-            if (_waitCounter > 0)
-            {
-                slStatus.Text = _waitCounter.ToString();
-                --_waitCounter;
-                
-                return;
-            }
-
-            if (GetNumberOfPrintJobs() != 0)
-            {
-                slStatus.Text = Properties.Resources.PRINTERISBUSY;
-                return;
-            }
-
-            if (chkPause.Checked)
-            {
-                slStatus.Text = Properties.Resources.PAUSED;
-                return;
-            }
-
-            slStatus.Text = "";
-
-            inprocess = true;
             progMain.Value = _curIndex;
-            try
+            //try
             {
                 string url = _urls[_curIndex];
 
@@ -187,7 +167,7 @@ namespace printurls
                 if (_curIndex >= _urls.Count)
                 {
                     this.Focus();
-                    CenteredMessageBox.Show(this, 
+                    CenteredMessageBox.Show(this,
                         Properties.Resources.DONE,
                         Application.ProductName,
                         MessageBoxButtons.OK,
@@ -196,14 +176,50 @@ namespace printurls
                     return;
                 }
             }
-            catch (Exception ex)
+            //catch (Exception ex)
+            //{
+            //    CenteredMessageBox.Show(this, ex.Message);
+            //}
+            //finally
             {
-                CenteredMessageBox.Show(this, ex.Message);
+                //inprocess = false;
             }
-            finally
+
+        }
+        private void basicTimer_Tick(object sender, EventArgs e)
+        {
+
+            if (_curIndex >= _urls.Count)
+                return;
+
+            if (inprocess)
+                return;
+
+            if (_waitCounter > 0)
             {
-                inprocess = false;
+                slStatus.Text = Properties.Resources.INTERVAL_WAIT + _waitCounter.ToString();
+                --_waitCounter;
+                
+                return;
             }
+
+            if (GetNumberOfPrintJobs() != 0)
+            {
+                slStatus.Text = Properties.Resources.PRINTERISBUSY;
+                return;
+            }
+
+            if (chkPause.Checked)
+            {
+                slStatus.Text = Properties.Resources.PAUSED;
+                return;
+            }
+
+            slStatus.Text = "";
+
+            inprocess = true;
+            DoTimerStaff();
+            inprocess = false;
         }
 
         private void btnPrintAndGoNext_Click(object sender, EventArgs e)
@@ -228,6 +244,8 @@ namespace printurls
                 e.Cancel = true;
                 return;
             }
+
+            Environment.Exit(0);
         }
     }
 }

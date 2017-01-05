@@ -50,27 +50,39 @@
             // 
             // wbPrint
             // 
-            resources.ApplyResources(this.wbPrint, "wbPrint");
-            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 22);
+            this.wbPrint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.wbPrint.Location = new System.Drawing.Point(12, 53);
+            this.wbPrint.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbPrint.Name = "wbPrint";
+            this.wbPrint.Size = new System.Drawing.Size(745, 341);
+            this.wbPrint.TabIndex = 2;
             this.wbPrint.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbPrint_Navigated);
             // 
             // btnClose
             // 
-            resources.ApplyResources(this.btnClose, "btnClose");
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(644, 402);
             this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(113, 31);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "&Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // udWait
             // 
-            resources.ApplyResources(this.udWait, "udWait");
+            this.udWait.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.udWait.Location = new System.Drawing.Point(12, 408);
             this.udWait.Maximum = new decimal(new int[] {
             65535,
             0,
             0,
             0});
             this.udWait.Name = "udWait";
+            this.udWait.Size = new System.Drawing.Size(87, 19);
+            this.udWait.TabIndex = 3;
             this.udWait.Value = new decimal(new int[] {
             30,
             0,
@@ -79,8 +91,13 @@
             // 
             // chkPause
             // 
-            resources.ApplyResources(this.chkPause, "chkPause");
+            this.chkPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkPause.AutoSize = true;
+            this.chkPause.Location = new System.Drawing.Point(583, 410);
             this.chkPause.Name = "chkPause";
+            this.chkPause.Size = new System.Drawing.Size(55, 16);
+            this.chkPause.TabIndex = 7;
+            this.chkPause.Text = "&Pause";
             this.chkPause.UseVisualStyleBackColor = true;
             // 
             // basicTimer
@@ -90,44 +107,65 @@
             // 
             // progMain
             // 
-            resources.ApplyResources(this.progMain, "progMain");
+            this.progMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.progMain.Location = new System.Drawing.Point(12, 11);
             this.progMain.Name = "progMain";
+            this.progMain.Size = new System.Drawing.Size(745, 21);
+            this.progMain.TabIndex = 0;
             // 
             // statusMain
             // 
             this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slBrowser,
             this.slStatus});
-            resources.ApplyResources(this.statusMain, "statusMain");
+            this.statusMain.Location = new System.Drawing.Point(0, 436);
             this.statusMain.Name = "statusMain";
+            this.statusMain.Size = new System.Drawing.Size(771, 22);
+            this.statusMain.TabIndex = 9;
+            this.statusMain.Text = "statusStrip1";
             // 
             // slBrowser
             // 
             this.slBrowser.Name = "slBrowser";
-            resources.ApplyResources(this.slBrowser, "slBrowser");
+            this.slBrowser.Size = new System.Drawing.Size(84, 17);
+            this.slBrowser.Text = "Browser Ready";
             // 
             // slStatus
             // 
             this.slStatus.Name = "slStatus";
-            resources.ApplyResources(this.slStatus, "slStatus");
+            this.slStatus.Size = new System.Drawing.Size(39, 17);
+            this.slStatus.Text = "Ready";
             // 
             // btnPrintAndGoNext
             // 
-            resources.ApplyResources(this.btnPrintAndGoNext, "btnPrintAndGoNext");
+            this.btnPrintAndGoNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrintAndGoNext.Enabled = false;
+            this.btnPrintAndGoNext.Location = new System.Drawing.Point(105, 404);
             this.btnPrintAndGoNext.Name = "btnPrintAndGoNext";
+            this.btnPrintAndGoNext.Size = new System.Drawing.Size(147, 26);
+            this.btnPrintAndGoNext.TabIndex = 4;
+            this.btnPrintAndGoNext.Text = "Print and Go Next";
             this.btnPrintAndGoNext.UseVisualStyleBackColor = true;
             this.btnPrintAndGoNext.Click += new System.EventHandler(this.btnPrintAndGoNext_Click);
             // 
             // txtUrl
             // 
-            resources.ApplyResources(this.txtUrl, "txtUrl");
+            this.txtUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUrl.Location = new System.Drawing.Point(12, 38);
             this.txtUrl.Name = "txtUrl";
             this.txtUrl.ReadOnly = true;
+            this.txtUrl.Size = new System.Drawing.Size(745, 19);
+            this.txtUrl.TabIndex = 1;
             // 
             // udPrintWait
             // 
-            resources.ApplyResources(this.udPrintWait, "udPrintWait");
+            this.udPrintWait.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.udPrintWait.Location = new System.Drawing.Point(385, 409);
             this.udPrintWait.Name = "udPrintWait";
+            this.udPrintWait.Size = new System.Drawing.Size(120, 19);
+            this.udPrintWait.TabIndex = 6;
             this.udPrintWait.Value = new decimal(new int[] {
             5,
             0,
@@ -136,13 +174,19 @@
             // 
             // label1
             // 
-            resources.ApplyResources(this.label1, "label1");
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(326, 413);
             this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "PrintWait:";
             // 
             // FormPrint
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(771, 458);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.udPrintWait);
             this.Controls.Add(this.txtUrl);
@@ -153,8 +197,10 @@
             this.Controls.Add(this.udWait);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.wbPrint);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormPrint";
+            this.Text = "Print : PrintURLs";
             this.Load += new System.EventHandler(this.FormPrint_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormPrint_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.udWait)).EndInit();
