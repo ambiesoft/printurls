@@ -93,7 +93,7 @@ namespace printurls
         /// 
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -101,32 +101,41 @@ namespace printurls
 
             setBrowserEmulationMode(GetIEVersion());
 
-            FormInputUrl inputdlg = new FormInputUrl();
+            FormInputUrl inputdlg = new FormInputUrl(args);
             if (DialogResult.OK != inputdlg.ShowDialog())
                 return;
 
-            string url = inputdlg.txtUrl.Text;
-            if (string.IsNullOrEmpty(url))
+            List<string> urls;
+            if (inputdlg.IsResultOpenURL)
             {
-                // showerror(printurls.Properties.Resources.NOURL);
-                url = "about:blank";
+                string url = inputdlg.txtPageUrl.Text;
+                if (string.IsNullOrEmpty(url))
+                {
+                    // showerror(printurls.Properties.Resources.NOURL);
+                    url = "about:blank";
+                }
+
+                FormIterate itrdlg = new FormIterate();
+                itrdlg._url = url;
+                if (DialogResult.OK != itrdlg.ShowDialog())
+                    return;
+
+                urls = itrdlg._retresult;
+            }
+            else
+            {
+                urls = new List<string>(inputdlg.ResultURLs);
             }
 
-
-
-            FormIterate itrdlg = new FormIterate();
-            itrdlg._url = url;
-            if (DialogResult.OK != itrdlg.ShowDialog())
-                return;
-
-            if (itrdlg._retresult.Count == 0)
+            if (urls == null || urls.Count == 0)
             {
                 showerror(printurls.Properties.Resources.NOURL);
                 return;
             }
 
+
             FormPrint pntdlg = new FormPrint();
-            pntdlg._urls = itrdlg._retresult;
+            pntdlg._urls = urls;
             pntdlg.ShowDialog();
         }
     }
