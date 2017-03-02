@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIterate));
             this.spWebList = new System.Windows.Forms.SplitContainer();
             this.wbBase = new System.Windows.Forms.WebBrowser();
@@ -47,6 +48,9 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.slItemCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ctxListItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
             this.spWebList.SuspendLayout();
@@ -55,6 +59,7 @@
             this.spRoot.Panel2.SuspendLayout();
             this.spRoot.SuspendLayout();
             this.statusMain.SuspendLayout();
+            this.ctxListItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // spWebList
@@ -74,7 +79,7 @@
             // wbBase
             // 
             resources.ApplyResources(this.wbBase, "wbBase");
-            this.wbBase.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbBase.MinimumSize = new System.Drawing.Size(20, 22);
             this.wbBase.Name = "wbBase";
             // 
             // listUrls
@@ -83,6 +88,7 @@
             this.listUrls.AllowReorder = true;
             this.listUrls.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.hdUrl});
+            this.listUrls.ContextMenuStrip = this.ctxListItem;
             resources.ApplyResources(this.listUrls, "listUrls");
             this.listUrls.LineColor = System.Drawing.Color.Red;
             this.listUrls.Name = "listUrls";
@@ -201,6 +207,26 @@
             this.slItemCount.Name = "slItemCount";
             resources.ApplyResources(this.slItemCount, "slItemCount");
             // 
+            // ctxListItem
+            // 
+            this.ctxListItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem,
+            this.openToolStripMenuItem});
+            this.ctxListItem.Name = "ctxListItem";
+            resources.ApplyResources(this.ctxListItem, "ctxListItem");
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
             // FormIterate
             // 
             this.AcceptButton = this.btnPrintAll;
@@ -223,6 +249,7 @@
             this.spRoot.ResumeLayout(false);
             this.statusMain.ResumeLayout(false);
             this.statusMain.PerformLayout();
+            this.ctxListItem.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,6 +275,9 @@
         private System.Windows.Forms.ToolStripMenuItem deployRangedURLToolStripMenuItem;
         private System.Windows.Forms.TextBox txtTmp;
         private System.Windows.Forms.ToolStripStatusLabel slItemCount;
+        private System.Windows.Forms.ContextMenuStrip ctxListItem;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using mshtml;
 using Ambiesoft;
+using System.Diagnostics;
 
 namespace printurls
 {
@@ -313,6 +314,18 @@ namespace printurls
             }
             catch (Exception ex) { CenteredMessageBox.Show(this, ex.Message, Application.ProductName); }
 
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(listUrls.SelectedItems[0].Text);
+            }
+            catch (Exception ex)
+            {
+                CenteredMessageBox.Show(this, ex.Message, Application.ProductName);
+            }
         }
 
 
