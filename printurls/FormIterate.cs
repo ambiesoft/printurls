@@ -328,6 +328,37 @@ namespace printurls
             }
         }
 
+        private void tsCopyAll_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (ListViewItem item in listUrls.Items)
+            {
+                sb.AppendLine(item.Text);
+            }
+
+            try
+            {
+                Clipboard.SetText(sb.ToString());
+            }
+            catch (Exception ex)
+            {
+                CenteredMessageBox.Show(this,
+                    ex.Message,
+                    Application.ProductName);
+            }
+        }
+
+        private void tsPaste_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsClear_Click(object sender, EventArgs e)
+        {
+            listUrls.Items.Clear();
+        }
+
 
 
 

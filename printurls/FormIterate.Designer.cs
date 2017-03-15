@@ -34,6 +34,9 @@
             this.wbBase = new System.Windows.Forms.WebBrowser();
             this.listUrls = new DragNDrop.DragAndDropListView();
             this.hdUrl = new System.Windows.Forms.ColumnHeader();
+            this.ctxListItem = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsExtract = new System.Windows.Forms.ToolStrip();
             this.tsbExtractAllLinks = new System.Windows.Forms.ToolStripButton();
             this.tsbExtractSelectedLinks = new System.Windows.Forms.ToolStripButton();
@@ -48,18 +51,20 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.slItemCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.ctxListItem = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsCopyAll = new System.Windows.Forms.ToolStripButton();
+            this.tsPaste = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsClear = new System.Windows.Forms.ToolStripButton();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
             this.spWebList.SuspendLayout();
+            this.ctxListItem.SuspendLayout();
             this.tsExtract.SuspendLayout();
             this.spRoot.Panel1.SuspendLayout();
             this.spRoot.Panel2.SuspendLayout();
             this.spRoot.SuspendLayout();
             this.statusMain.SuspendLayout();
-            this.ctxListItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // spWebList
@@ -99,32 +104,54 @@
             // 
             resources.ApplyResources(this.hdUrl, "hdUrl");
             // 
+            // ctxListItem
+            // 
+            this.ctxListItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem,
+            this.openToolStripMenuItem});
+            this.ctxListItem.Name = "ctxListItem";
+            resources.ApplyResources(this.ctxListItem, "ctxListItem");
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
+            this.removeToolStripMenuItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
             // tsExtract
             // 
             this.tsExtract.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbExtractAllLinks,
             this.tsbExtractSelectedLinks,
-            this.tssbInsertURLs});
+            this.tssbInsertURLs,
+            this.toolStripSeparator1,
+            this.tsCopyAll,
+            this.tsPaste,
+            this.toolStripSeparator2,
+            this.tsClear});
             resources.ApplyResources(this.tsExtract, "tsExtract");
             this.tsExtract.Name = "tsExtract";
             // 
             // tsbExtractAllLinks
             // 
-            this.tsbExtractAllLinks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.tsbExtractAllLinks, "tsbExtractAllLinks");
             this.tsbExtractAllLinks.Name = "tsbExtractAllLinks";
             this.tsbExtractAllLinks.Click += new System.EventHandler(this.tsbExtractAllLinks_Click);
             // 
             // tsbExtractSelectedLinks
             // 
-            this.tsbExtractSelectedLinks.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             resources.ApplyResources(this.tsbExtractSelectedLinks, "tsbExtractSelectedLinks");
             this.tsbExtractSelectedLinks.Name = "tsbExtractSelectedLinks";
             this.tsbExtractSelectedLinks.Click += new System.EventHandler(this.tsbExtractSelectedLinks_Click);
             // 
             // tssbInsertURLs
             // 
-            this.tssbInsertURLs.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.tssbInsertURLs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deployRangedURLToolStripMenuItem});
             resources.ApplyResources(this.tssbInsertURLs, "tssbInsertURLs");
@@ -207,25 +234,33 @@
             this.slItemCount.Name = "slItemCount";
             resources.ApplyResources(this.slItemCount, "slItemCount");
             // 
-            // ctxListItem
+            // toolStripSeparator1
             // 
-            this.ctxListItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.removeToolStripMenuItem,
-            this.openToolStripMenuItem});
-            this.ctxListItem.Name = "ctxListItem";
-            resources.ApplyResources(this.ctxListItem, "ctxListItem");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
-            // removeToolStripMenuItem
+            // tsCopyAll
             // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
-            resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
-            this.removeToolStripMenuItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            resources.ApplyResources(this.tsCopyAll, "tsCopyAll");
+            this.tsCopyAll.Name = "tsCopyAll";
+            this.tsCopyAll.Click += new System.EventHandler(this.tsCopyAll_Click);
             // 
-            // openToolStripMenuItem
+            // tsPaste
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            resources.ApplyResources(this.tsPaste, "tsPaste");
+            this.tsPaste.Name = "tsPaste";
+            this.tsPaste.Click += new System.EventHandler(this.tsPaste_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // tsClear
+            // 
+            resources.ApplyResources(this.tsClear, "tsClear");
+            this.tsClear.Name = "tsClear";
+            this.tsClear.Click += new System.EventHandler(this.tsClear_Click);
             // 
             // FormIterate
             // 
@@ -241,6 +276,7 @@
             this.spWebList.Panel2.ResumeLayout(false);
             this.spWebList.Panel2.PerformLayout();
             this.spWebList.ResumeLayout(false);
+            this.ctxListItem.ResumeLayout(false);
             this.tsExtract.ResumeLayout(false);
             this.tsExtract.PerformLayout();
             this.spRoot.Panel1.ResumeLayout(false);
@@ -249,7 +285,6 @@
             this.spRoot.ResumeLayout(false);
             this.statusMain.ResumeLayout(false);
             this.statusMain.PerformLayout();
-            this.ctxListItem.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,6 +313,11 @@
         private System.Windows.Forms.ContextMenuStrip ctxListItem;
         private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton tsCopyAll;
+        private System.Windows.Forms.ToolStripButton tsPaste;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton tsClear;
     }
 }
 
