@@ -1,0 +1,29 @@
+{
+	"name": "printurls",
+	"solution": "printurls2013.sln",
+	"targetproject": "printurls2013",
+	"configuration": "Release",
+    "targets": [
+            {
+            	"setoutdirforbuild": true,
+                "outdir" : "C:/Linkout/printurls/",
+                "platform":"Any CPU"
+            }
+    ],
+    "archivedir": "C:/Linkout/",
+    "remotedir": "http://ambiesoft.fam.cx/ffdav/uploads/printurls/",
+    "remotesha1" : "http://ambiesoft.fam.cx/ffdav/uploads/getSha1.php?file=printurls/{}",
+    
+    "TotalFileCount": 19,
+    
+    "ShouldNotBeFiles": [
+    ],
+    
+    "ShouldBeFiles": [
+    ],
+    
+    "ShouldBeOneOfThem": [],
+    
+    "obtainverfrom": "History.txt",
+    "obtainverregex": "\\d+\\.\\d+"
+}

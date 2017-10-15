@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using Ambiesoft;
+using System.Reflection;
 
 namespace printurls
 {
@@ -137,7 +138,7 @@ namespace printurls
             {
                 if (u.IndexOf('[') >= 0 && u.IndexOf(']') >= 0)
                 {
-                    if (DialogResult.Yes != CenteredMessageBox.Show(this,
+                    if (DialogResult.Yes != CppUtils.CenteredMessageBox(this,
                         Properties.Resources.URL_INCLUDES_BLANCKET_CONTINUE,
                         Application.ProductName,
                         MessageBoxButtons.YesNo,
@@ -149,6 +150,25 @@ namespace printurls
                     }
                 }
             }
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(Application.ProductName);
+            sb.Append("Version");
+            sb.Append(" ");
+            sb.Append(AmbLib.getAssemblyVersion(Assembly.GetExecutingAssembly()));
+            sb.AppendLine();
+            sb.Append("copyright 2017 ");
+            sb.Append("Ambiesoft");
+
+            CppUtils.CenteredMessageBox(this,
+                sb.ToString(),
+                Application.ProductName,
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+                
         }
 
     }

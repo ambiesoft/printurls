@@ -53,7 +53,7 @@ namespace printurls
                     TimeSpan ts = DateTime.Now.Subtract(start);
                     if (ts.Seconds > 10)
                     {
-                        switch (CenteredMessageBox.Show(this,
+                        switch (CppUtils.CenteredMessageBox(this,
                             Properties.Resources.CancelCompleteCheck,
                             Application.ProductName,
                             MessageBoxButtons.YesNoCancel,
@@ -108,7 +108,7 @@ namespace printurls
                     }
                     catch (Exception ex)
                     {
-                        CenteredMessageBox.Show(this,
+                        CppUtils.CenteredMessageBox(this,
                             ex.Message,
                             Application.ProductName,
                             MessageBoxButtons.OK,
@@ -230,7 +230,7 @@ namespace printurls
                     listUrls.Items.Add(line);
                 }
             }
-            catch (Exception ex) { CenteredMessageBox.Show(this, ex.Message, Application.ProductName); }
+            catch (Exception ex) { CppUtils.CenteredMessageBox(this, ex.Message, Application.ProductName); }
 
 
         }
@@ -312,7 +312,7 @@ namespace printurls
                     }
                 }
             }
-            catch (Exception ex) { CenteredMessageBox.Show(this, ex.Message, Application.ProductName); }
+            catch (Exception ex) { CppUtils.CenteredMessageBox(this, ex.Message, Application.ProductName); }
 
         }
 
@@ -324,7 +324,7 @@ namespace printurls
             }
             catch (Exception ex)
             {
-                CenteredMessageBox.Show(this, ex.Message, Application.ProductName);
+                CppUtils.CenteredMessageBox(this, ex.Message, Application.ProductName);
             }
         }
 
@@ -343,7 +343,7 @@ namespace printurls
             }
             catch (Exception ex)
             {
-                CenteredMessageBox.Show(this,
+                CppUtils.CenteredMessageBox(this,
                     ex.Message,
                     Application.ProductName);
             }

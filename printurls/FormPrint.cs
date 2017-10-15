@@ -167,7 +167,7 @@ namespace printurls
                 if (_curIndex >= _urls.Count)
                 {
                     this.Focus();
-                    CenteredMessageBox.Show(this,
+                    CppUtils.CenteredMessageBox(this,
                         Properties.Resources.DONE,
                         Application.ProductName,
                         MessageBoxButtons.OK,
@@ -178,7 +178,7 @@ namespace printurls
             }
             //catch (Exception ex)
             //{
-            //    CenteredMessageBox.Show(this, ex.Message);
+            //    CppUtils.CenteredMessageBox(this, ex.Message);
             //}
             //finally
             {
@@ -234,7 +234,7 @@ namespace printurls
 
         private void FormPrint_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (DialogResult.Yes != CenteredMessageBox.Show(this,
+            if (DialogResult.Yes != CppUtils.CenteredMessageBox(this,
                 Properties.Resources.AreYouSureToQuit,
                 Application.ProductName,
                 MessageBoxButtons.YesNo,

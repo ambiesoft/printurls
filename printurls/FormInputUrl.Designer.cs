@@ -37,66 +37,44 @@
             this.radioEnterURLs = new System.Windows.Forms.RadioButton();
             this.txtEnterURLs = new System.Windows.Forms.TextBox();
             this.btnExpand = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPageUrl
             // 
-            this.txtPageUrl.AccessibleDescription = null;
-            this.txtPageUrl.AccessibleName = null;
             resources.ApplyResources(this.txtPageUrl, "txtPageUrl");
-            this.txtPageUrl.BackgroundImage = null;
-            this.txtPageUrl.Font = null;
             this.txtPageUrl.Name = "txtPageUrl";
             // 
             // btnStart
             // 
-            this.btnStart.AccessibleDescription = null;
-            this.btnStart.AccessibleName = null;
             resources.ApplyResources(this.btnStart, "btnStart");
-            this.btnStart.BackgroundImage = null;
             this.btnStart.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnStart.Font = null;
             this.btnStart.Name = "btnStart";
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.AccessibleDescription = null;
-            this.btnCancel.AccessibleName = null;
             resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackgroundImage = null;
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Font = null;
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
             resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
             this.label1.Name = "label1";
             // 
             // radioOpenUrl
             // 
-            this.radioOpenUrl.AccessibleDescription = null;
-            this.radioOpenUrl.AccessibleName = null;
             resources.ApplyResources(this.radioOpenUrl, "radioOpenUrl");
-            this.radioOpenUrl.BackgroundImage = null;
-            this.radioOpenUrl.Font = null;
             this.radioOpenUrl.Name = "radioOpenUrl";
             this.radioOpenUrl.UseVisualStyleBackColor = true;
             this.radioOpenUrl.CheckedChanged += new System.EventHandler(this.radioOpenUrl_CheckedChanged);
             // 
             // radioEnterURLs
             // 
-            this.radioEnterURLs.AccessibleDescription = null;
-            this.radioEnterURLs.AccessibleName = null;
             resources.ApplyResources(this.radioEnterURLs, "radioEnterURLs");
-            this.radioEnterURLs.BackgroundImage = null;
-            this.radioEnterURLs.Font = null;
             this.radioEnterURLs.Name = "radioEnterURLs";
             this.radioEnterURLs.UseVisualStyleBackColor = true;
             this.radioEnterURLs.CheckedChanged += new System.EventHandler(this.radioEnterURLs_CheckedChanged);
@@ -104,33 +82,30 @@
             // txtEnterURLs
             // 
             this.txtEnterURLs.AcceptsReturn = true;
-            this.txtEnterURLs.AccessibleDescription = null;
-            this.txtEnterURLs.AccessibleName = null;
             resources.ApplyResources(this.txtEnterURLs, "txtEnterURLs");
-            this.txtEnterURLs.BackgroundImage = null;
-            this.txtEnterURLs.Font = null;
             this.txtEnterURLs.Name = "txtEnterURLs";
             // 
             // btnExpand
             // 
-            this.btnExpand.AccessibleDescription = null;
-            this.btnExpand.AccessibleName = null;
             resources.ApplyResources(this.btnExpand, "btnExpand");
-            this.btnExpand.BackgroundImage = null;
-            this.btnExpand.Font = null;
             this.btnExpand.Name = "btnExpand";
             this.btnExpand.UseVisualStyleBackColor = true;
             this.btnExpand.Click += new System.EventHandler(this.btnExpand_Click);
             // 
+            // btnAbout
+            // 
+            resources.ApplyResources(this.btnAbout, "btnAbout");
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
             // FormInputUrl
             // 
             this.AcceptButton = this.btnStart;
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = null;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnExpand);
             this.Controls.Add(this.txtEnterURLs);
             this.Controls.Add(this.radioEnterURLs);
@@ -139,7 +114,6 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtPageUrl);
-            this.Font = null;
             this.Name = "FormInputUrl";
             this.Load += new System.EventHandler(this.FormInputUrl_Load);
             this.ResumeLayout(false);
@@ -157,5 +131,6 @@
         private System.Windows.Forms.RadioButton radioEnterURLs;
         private System.Windows.Forms.TextBox txtEnterURLs;
         private System.Windows.Forms.Button btnExpand;
+        private System.Windows.Forms.Button btnAbout;
     }
 }
