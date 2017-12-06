@@ -136,7 +136,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,12 +153,6 @@
     <Content Include="memo.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DragAndDropListView\DragNDrop.csproj">
-      <Project>{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}</Project>
-      <Name>DragNDrop</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -170,6 +163,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DragAndDropListView\DragNDrop2013.csproj">
+      <Project>{c7e21f05-c166-4dcc-8429-ec8a4c1a67b6}</Project>
+      <Name>DragNDrop2013</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

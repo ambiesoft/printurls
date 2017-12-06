@@ -112,16 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="spWebList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="spWebList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -134,10 +134,13 @@
   <data name="wbBase.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="wbBase.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>20, 22</value>
+  </data>
   <data name="wbBase.Size" type="System.Drawing.Size, System.Drawing">
     <value>771, 246</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="wbBase.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -145,7 +148,7 @@
     <value>wbBase</value>
   </data>
   <data name="&gt;&gt;wbBase.Type" xml:space="preserve">
-    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;wbBase.Parent" xml:space="preserve">
     <value>spWebList.Panel1</value>
@@ -157,7 +160,7 @@
     <value>spWebList.Panel1</value>
   </data>
   <data name="&gt;&gt;spWebList.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spWebList.Panel1.Parent" xml:space="preserve">
     <value>spWebList</value>
@@ -171,29 +174,29 @@
   <data name="hdUrl.Width" type="System.Int32, mscorlib">
     <value>256</value>
   </data>
-  <metadata name="ctxListItem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="ctxListItem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>155, 23</value>
   </metadata>
   <data name="removeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Remove</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Open</value>
   </data>
   <data name="ctxListItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 48</value>
+    <value>118, 48</value>
   </data>
   <data name="&gt;&gt;ctxListItem.Name" xml:space="preserve">
     <value>ctxListItem</value>
   </data>
   <data name="&gt;&gt;ctxListItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="listUrls.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -211,7 +214,7 @@
     <value>listUrls</value>
   </data>
   <data name="&gt;&gt;listUrls.Type" xml:space="preserve">
-    <value>DragNDrop.DragAndDropListView, DragNDrop, Version=1.0.6284.11941, Culture=neutral, PublicKeyToken=null</value>
+    <value>DragNDrop.DragAndDropListView, DragNDrop, Version=1.0.6550.147, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;listUrls.Parent" xml:space="preserve">
     <value>spWebList.Panel2</value>
@@ -219,7 +222,7 @@
   <data name="&gt;&gt;listUrls.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="tsExtract.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="tsExtract.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>-2, 20</value>
   </metadata>
   <data name="tsbExtractAllLinks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -241,7 +244,7 @@
     <value>Magenta</value>
   </data>
   <data name="tsbExtractAllLinks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
+    <value>109, 22</value>
   </data>
   <data name="tsbExtractAllLinks.Text" xml:space="preserve">
     <value>Extract &amp;All Links</value>
@@ -265,13 +268,13 @@
     <value>Magenta</value>
   </data>
   <data name="tsbExtractSelectedLinks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
+    <value>139, 22</value>
   </data>
   <data name="tsbExtractSelectedLinks.Text" xml:space="preserve">
     <value>Extract &amp;Selected Links</value>
   </data>
   <data name="deployRangedURLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>189, 22</value>
+    <value>178, 22</value>
   </data>
   <data name="deployRangedURLToolStripMenuItem.Text" xml:space="preserve">
     <value>Deploy Ranged URL</value>
@@ -295,7 +298,7 @@
     <value>Magenta</value>
   </data>
   <data name="tssbInsertURLs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 22</value>
+    <value>97, 22</value>
   </data>
   <data name="tssbInsertURLs.Text" xml:space="preserve">
     <value>Insert URLs</value>
@@ -322,7 +325,7 @@
     <value>Magenta</value>
   </data>
   <data name="tsCopyAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
+    <value>69, 22</value>
   </data>
   <data name="tsCopyAll.Text" xml:space="preserve">
     <value>&amp;CopyAll</value>
@@ -346,7 +349,7 @@
     <value>Magenta</value>
   </data>
   <data name="tsPaste.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 22</value>
+    <value>55, 22</value>
   </data>
   <data name="tsPaste.Text" xml:space="preserve">
     <value>&amp;Paste</value>
@@ -373,7 +376,7 @@
     <value>Magenta</value>
   </data>
   <data name="tsClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 22</value>
+    <value>54, 22</value>
   </data>
   <data name="tsClear.Text" xml:space="preserve">
     <value>&amp;Clear</value>
@@ -394,7 +397,7 @@
     <value>tsExtract</value>
   </data>
   <data name="&gt;&gt;tsExtract.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsExtract.Parent" xml:space="preserve">
     <value>spWebList.Panel2</value>
@@ -406,7 +409,7 @@
     <value>spWebList.Panel2</value>
   </data>
   <data name="&gt;&gt;spWebList.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spWebList.Panel2.Parent" xml:space="preserve">
     <value>spWebList</value>
@@ -427,7 +430,7 @@
     <value>spWebList</value>
   </data>
   <data name="&gt;&gt;spWebList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spWebList.Parent" xml:space="preserve">
     <value>spRoot.Panel1</value>
@@ -448,7 +451,7 @@
     <value>spRoot.Panel1</value>
   </data>
   <data name="&gt;&gt;spRoot.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spRoot.Panel1.Parent" xml:space="preserve">
     <value>spRoot</value>
@@ -475,7 +478,7 @@
     <value>txtTmp</value>
   </data>
   <data name="&gt;&gt;txtTmp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtTmp.Parent" xml:space="preserve">
     <value>spRoot.Panel2</value>
@@ -499,7 +502,7 @@
     <value>btnUnique</value>
   </data>
   <data name="&gt;&gt;btnUnique.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnUnique.Parent" xml:space="preserve">
     <value>spRoot.Panel2</value>
@@ -526,7 +529,7 @@
     <value>btnPrintAll</value>
   </data>
   <data name="&gt;&gt;btnPrintAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnPrintAll.Parent" xml:space="preserve">
     <value>spRoot.Panel2</value>
@@ -553,7 +556,7 @@
     <value>btnRemoveItem</value>
   </data>
   <data name="&gt;&gt;btnRemoveItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnRemoveItem.Parent" xml:space="preserve">
     <value>spRoot.Panel2</value>
@@ -580,7 +583,7 @@
     <value>btnCancel</value>
   </data>
   <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
     <value>spRoot.Panel2</value>
@@ -592,7 +595,7 @@
     <value>spRoot.Panel2</value>
   </data>
   <data name="&gt;&gt;spRoot.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spRoot.Panel2.Parent" xml:space="preserve">
     <value>spRoot</value>
@@ -613,7 +616,7 @@
     <value>spRoot</value>
   </data>
   <data name="&gt;&gt;spRoot.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;spRoot.Parent" xml:space="preserve">
     <value>$this</value>
@@ -621,17 +624,17 @@
   <data name="&gt;&gt;spRoot.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="statusMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="statusMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 573</value>
   </metadata>
   <data name="slMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 17</value>
+    <value>680, 17</value>
   </data>
   <data name="slMain.Text" xml:space="preserve">
     <value>Ready</value>
   </data>
   <data name="slItemCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 17</value>
+    <value>45, 17</value>
   </data>
   <data name="slItemCount.Text" xml:space="preserve">
     <value>0 Items</value>
@@ -649,7 +652,7 @@
     <value>statusMain</value>
   </data>
   <data name="&gt;&gt;statusMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;statusMain.Parent" xml:space="preserve">
     <value>$this</value>
@@ -657,7 +660,7 @@
   <data name="&gt;&gt;statusMain.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
@@ -970,90 +973,90 @@
     <value>hdUrl</value>
   </data>
   <data name="&gt;&gt;hdUrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;removeToolStripMenuItem.Name" xml:space="preserve">
     <value>removeToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;removeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;openToolStripMenuItem.Name" xml:space="preserve">
     <value>openToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsbExtractAllLinks.Name" xml:space="preserve">
     <value>tsbExtractAllLinks</value>
   </data>
   <data name="&gt;&gt;tsbExtractAllLinks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsbExtractSelectedLinks.Name" xml:space="preserve">
     <value>tsbExtractSelectedLinks</value>
   </data>
   <data name="&gt;&gt;tsbExtractSelectedLinks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tssbInsertURLs.Name" xml:space="preserve">
     <value>tssbInsertURLs</value>
   </data>
   <data name="&gt;&gt;tssbInsertURLs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;deployRangedURLToolStripMenuItem.Name" xml:space="preserve">
     <value>deployRangedURLToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;deployRangedURLToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;slMain.Name" xml:space="preserve">
-    <value>slMain</value>
-  </data>
-  <data name="&gt;&gt;slMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;slItemCount.Name" xml:space="preserve">
-    <value>slItemCount</value>
-  </data>
-  <data name="&gt;&gt;slItemCount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsCopyAll.Name" xml:space="preserve">
     <value>tsCopyAll</value>
   </data>
   <data name="&gt;&gt;tsCopyAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsPaste.Name" xml:space="preserve">
     <value>tsPaste</value>
   </data>
   <data name="&gt;&gt;tsPaste.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
     <value>toolStripSeparator2</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsClear.Name" xml:space="preserve">
     <value>tsClear</value>
   </data>
   <data name="&gt;&gt;tsClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;slMain.Name" xml:space="preserve">
+    <value>slMain</value>
+  </data>
+  <data name="&gt;&gt;slMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;slItemCount.Name" xml:space="preserve">
+    <value>slItemCount</value>
+  </data>
+  <data name="&gt;&gt;slItemCount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormIterate</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

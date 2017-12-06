@@ -33,7 +33,7 @@
             this.spWebList = new System.Windows.Forms.SplitContainer();
             this.wbBase = new System.Windows.Forms.WebBrowser();
             this.listUrls = new DragNDrop.DragAndDropListView();
-            this.hdUrl = new System.Windows.Forms.ColumnHeader();
+            this.hdUrl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ctxListItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +42,11 @@
             this.tsbExtractSelectedLinks = new System.Windows.Forms.ToolStripButton();
             this.tssbInsertURLs = new System.Windows.Forms.ToolStripSplitButton();
             this.deployRangedURLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsCopyAll = new System.Windows.Forms.ToolStripButton();
+            this.tsPaste = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsClear = new System.Windows.Forms.ToolStripButton();
             this.spRoot = new System.Windows.Forms.SplitContainer();
             this.txtTmp = new System.Windows.Forms.TextBox();
             this.btnUnique = new System.Windows.Forms.Button();
@@ -51,16 +56,13 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.slItemCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsCopyAll = new System.Windows.Forms.ToolStripButton();
-            this.tsPaste = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsClear = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.spWebList)).BeginInit();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
             this.spWebList.SuspendLayout();
             this.ctxListItem.SuspendLayout();
             this.tsExtract.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spRoot)).BeginInit();
             this.spRoot.Panel1.SuspendLayout();
             this.spRoot.Panel2.SuspendLayout();
             this.spRoot.SuspendLayout();
@@ -84,7 +86,6 @@
             // wbBase
             // 
             resources.ApplyResources(this.wbBase, "wbBase");
-            this.wbBase.MinimumSize = new System.Drawing.Size(20, 22);
             this.wbBase.Name = "wbBase";
             // 
             // listUrls
@@ -164,6 +165,34 @@
             resources.ApplyResources(this.deployRangedURLToolStripMenuItem, "deployRangedURLToolStripMenuItem");
             this.deployRangedURLToolStripMenuItem.Click += new System.EventHandler(this.deployRangedURLToolStripMenuItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // tsCopyAll
+            // 
+            resources.ApplyResources(this.tsCopyAll, "tsCopyAll");
+            this.tsCopyAll.Name = "tsCopyAll";
+            this.tsCopyAll.Click += new System.EventHandler(this.tsCopyAll_Click);
+            // 
+            // tsPaste
+            // 
+            resources.ApplyResources(this.tsPaste, "tsPaste");
+            this.tsPaste.Name = "tsPaste";
+            this.tsPaste.Click += new System.EventHandler(this.tsPaste_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // tsClear
+            // 
+            resources.ApplyResources(this.tsClear, "tsClear");
+            this.tsClear.Name = "tsClear";
+            this.tsClear.Click += new System.EventHandler(this.tsClear_Click);
+            // 
             // spRoot
             // 
             resources.ApplyResources(this.spRoot, "spRoot");
@@ -228,39 +257,12 @@
             // 
             this.slMain.Name = "slMain";
             resources.ApplyResources(this.slMain, "slMain");
+            this.slMain.Spring = true;
             // 
             // slItemCount
             // 
             this.slItemCount.Name = "slItemCount";
             resources.ApplyResources(this.slItemCount, "slItemCount");
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
-            // 
-            // tsCopyAll
-            // 
-            resources.ApplyResources(this.tsCopyAll, "tsCopyAll");
-            this.tsCopyAll.Name = "tsCopyAll";
-            this.tsCopyAll.Click += new System.EventHandler(this.tsCopyAll_Click);
-            // 
-            // tsPaste
-            // 
-            resources.ApplyResources(this.tsPaste, "tsPaste");
-            this.tsPaste.Name = "tsPaste";
-            this.tsPaste.Click += new System.EventHandler(this.tsPaste_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // tsClear
-            // 
-            resources.ApplyResources(this.tsClear, "tsClear");
-            this.tsClear.Name = "tsClear";
-            this.tsClear.Click += new System.EventHandler(this.tsClear_Click);
             // 
             // FormIterate
             // 
@@ -275,6 +277,7 @@
             this.spWebList.Panel1.ResumeLayout(false);
             this.spWebList.Panel2.ResumeLayout(false);
             this.spWebList.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spWebList)).EndInit();
             this.spWebList.ResumeLayout(false);
             this.ctxListItem.ResumeLayout(false);
             this.tsExtract.ResumeLayout(false);
@@ -282,6 +285,7 @@
             this.spRoot.Panel1.ResumeLayout(false);
             this.spRoot.Panel2.ResumeLayout(false);
             this.spRoot.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spRoot)).EndInit();
             this.spRoot.ResumeLayout(false);
             this.statusMain.ResumeLayout(false);
             this.statusMain.PerformLayout();

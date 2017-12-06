@@ -14,7 +14,7 @@
     "remotedir": "http://ambiesoft.fam.cx/ffdav/uploads/printurls/",
     "remotesha1" : "http://ambiesoft.fam.cx/ffdav/uploads/getSha1.php?file=printurls/{}",
     
-    "TotalFileCount": 19,
+    "TotalFileCount": 18,
     
     "ShouldNotBeFiles": [
     ],
