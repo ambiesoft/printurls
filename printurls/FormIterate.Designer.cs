@@ -48,6 +48,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsClear = new System.Windows.Forms.ToolStripButton();
             this.spRoot = new System.Windows.Forms.SplitContainer();
+            this.btnCrop = new System.Windows.Forms.Button();
             this.txtTmp = new System.Windows.Forms.TextBox();
             this.btnUnique = new System.Windows.Forms.Button();
             this.btnPrintAll = new System.Windows.Forms.Button();
@@ -76,10 +77,12 @@
             // 
             // spWebList.Panel1
             // 
+            resources.ApplyResources(this.spWebList.Panel1, "spWebList.Panel1");
             this.spWebList.Panel1.Controls.Add(this.wbBase);
             // 
             // spWebList.Panel2
             // 
+            resources.ApplyResources(this.spWebList.Panel2, "spWebList.Panel2");
             this.spWebList.Panel2.Controls.Add(this.listUrls);
             this.spWebList.Panel2.Controls.Add(this.tsExtract);
             // 
@@ -90,12 +93,13 @@
             // 
             // listUrls
             // 
+            resources.ApplyResources(this.listUrls, "listUrls");
             this.listUrls.AllowDrop = true;
             this.listUrls.AllowReorder = true;
             this.listUrls.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.hdUrl});
             this.listUrls.ContextMenuStrip = this.ctxListItem;
-            resources.ApplyResources(this.listUrls, "listUrls");
+            this.listUrls.HideSelection = false;
             this.listUrls.LineColor = System.Drawing.Color.Red;
             this.listUrls.Name = "listUrls";
             this.listUrls.UseCompatibleStateImageBehavior = false;
@@ -107,26 +111,27 @@
             // 
             // ctxListItem
             // 
+            resources.ApplyResources(this.ctxListItem, "ctxListItem");
             this.ctxListItem.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.removeToolStripMenuItem,
             this.openToolStripMenuItem});
             this.ctxListItem.Name = "ctxListItem";
-            resources.ApplyResources(this.ctxListItem, "ctxListItem");
             // 
             // removeToolStripMenuItem
             // 
-            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // openToolStripMenuItem
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // tsExtract
             // 
+            resources.ApplyResources(this.tsExtract, "tsExtract");
             this.tsExtract.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbExtractAllLinks,
             this.tsbExtractSelectedLinks,
@@ -136,7 +141,6 @@
             this.tsPaste,
             this.toolStripSeparator2,
             this.tsClear});
-            resources.ApplyResources(this.tsExtract, "tsExtract");
             this.tsExtract.Name = "tsExtract";
             // 
             // tsbExtractAllLinks
@@ -153,22 +157,22 @@
             // 
             // tssbInsertURLs
             // 
+            resources.ApplyResources(this.tssbInsertURLs, "tssbInsertURLs");
             this.tssbInsertURLs.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.deployRangedURLToolStripMenuItem});
-            resources.ApplyResources(this.tssbInsertURLs, "tssbInsertURLs");
             this.tssbInsertURLs.Name = "tssbInsertURLs";
             this.tssbInsertURLs.ButtonClick += new System.EventHandler(this.tssbInsertURLs_ButtonClick);
             // 
             // deployRangedURLToolStripMenuItem
             // 
-            this.deployRangedURLToolStripMenuItem.Name = "deployRangedURLToolStripMenuItem";
             resources.ApplyResources(this.deployRangedURLToolStripMenuItem, "deployRangedURLToolStripMenuItem");
+            this.deployRangedURLToolStripMenuItem.Name = "deployRangedURLToolStripMenuItem";
             this.deployRangedURLToolStripMenuItem.Click += new System.EventHandler(this.deployRangedURLToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // tsCopyAll
             // 
@@ -184,8 +188,8 @@
             // 
             // toolStripSeparator2
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // tsClear
             // 
@@ -201,15 +205,25 @@
             // 
             // spRoot.Panel1
             // 
+            resources.ApplyResources(this.spRoot.Panel1, "spRoot.Panel1");
             this.spRoot.Panel1.Controls.Add(this.spWebList);
             // 
             // spRoot.Panel2
             // 
+            resources.ApplyResources(this.spRoot.Panel2, "spRoot.Panel2");
+            this.spRoot.Panel2.Controls.Add(this.btnCrop);
             this.spRoot.Panel2.Controls.Add(this.txtTmp);
             this.spRoot.Panel2.Controls.Add(this.btnUnique);
             this.spRoot.Panel2.Controls.Add(this.btnPrintAll);
             this.spRoot.Panel2.Controls.Add(this.btnRemoveItem);
             this.spRoot.Panel2.Controls.Add(this.btnCancel);
+            // 
+            // btnCrop
+            // 
+            resources.ApplyResources(this.btnCrop, "btnCrop");
+            this.btnCrop.Name = "btnCrop";
+            this.btnCrop.UseVisualStyleBackColor = true;
+            this.btnCrop.Click += new System.EventHandler(this.btnCrop_Click);
             // 
             // txtTmp
             // 
@@ -247,22 +261,22 @@
             // 
             // statusMain
             // 
+            resources.ApplyResources(this.statusMain, "statusMain");
             this.statusMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.slMain,
             this.slItemCount});
-            resources.ApplyResources(this.statusMain, "statusMain");
             this.statusMain.Name = "statusMain";
             // 
             // slMain
             // 
-            this.slMain.Name = "slMain";
             resources.ApplyResources(this.slMain, "slMain");
+            this.slMain.Name = "slMain";
             this.slMain.Spring = true;
             // 
             // slItemCount
             // 
-            this.slItemCount.Name = "slItemCount";
             resources.ApplyResources(this.slItemCount, "slItemCount");
+            this.slItemCount.Name = "slItemCount";
             // 
             // FormIterate
             // 
@@ -322,6 +336,7 @@
         private System.Windows.Forms.ToolStripButton tsPaste;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton tsClear;
+        private System.Windows.Forms.Button btnCrop;
     }
 }
 

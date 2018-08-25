@@ -15,5 +15,5 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("aaff787d-a476-49e3-a9c8-2cebb93b8160")]
 
-[assembly: AssemblyVersion("1.1.*")]
+[assembly: AssemblyVersion("1.2.*")]
 

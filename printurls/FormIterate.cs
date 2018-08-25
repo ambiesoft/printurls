@@ -190,6 +190,20 @@ namespace printurls
                 listUrls.Items.Remove(item);
             }
         }
+        private void btnCrop_Click(object sender, EventArgs e)
+        {
+            if(listUrls.SelectedItems.Count==0)
+            {
+                CppUtils.Alert(this, Properties.Resources.NO_ITEM_SELECTED);
+                return;
+            }
+
+            foreach(ListViewItem item in listUrls.Items)
+            {
+                if (!item.Selected)
+                    item.Remove();
+            }
+        }
 
         internal List<string> _retresult;
         private void btnPrintAll_Click(object sender, EventArgs e)
@@ -358,6 +372,8 @@ namespace printurls
         {
             listUrls.Items.Clear();
         }
+
+    
 
 
 

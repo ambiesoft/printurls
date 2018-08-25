@@ -130,7 +130,7 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtPageUrl.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>300</value>
   </data>
   <data name="&gt;&gt;txtPageUrl.Name" xml:space="preserve">
     <value>txtPageUrl</value>
@@ -154,7 +154,7 @@
     <value>75, 25</value>
   </data>
   <data name="btnStart.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>800</value>
   </data>
   <data name="btnStart.Text" xml:space="preserve">
     <value>&amp;OK</value>
@@ -181,7 +181,7 @@
     <value>75, 25</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>900</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>&amp;Cancel</value>
@@ -208,7 +208,7 @@
     <value>29, 13</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>200</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>&amp;URL</value>
@@ -235,7 +235,7 @@
     <value>192, 17</value>
   </data>
   <data name="radioOpenUrl.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>100</value>
   </data>
   <data name="radioOpenUrl.Text" xml:space="preserve">
     <value>Open Index Page and Obtain Index</value>
@@ -262,7 +262,7 @@
     <value>80, 17</value>
   </data>
   <data name="radioEnterURLs.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>400</value>
   </data>
   <data name="radioEnterURLs.Text" xml:space="preserve">
     <value>Enter URLs</value>
@@ -295,7 +295,7 @@
     <value>496, 202</value>
   </data>
   <data name="txtEnterURLs.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>600</value>
   </data>
   <data name="&gt;&gt;txtEnterURLs.Name" xml:space="preserve">
     <value>txtEnterURLs</value>
@@ -316,7 +316,7 @@
     <value>75, 23</value>
   </data>
   <data name="btnExpand.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>500</value>
   </data>
   <data name="btnExpand.Text" xml:space="preserve">
     <value>&amp;Expand</value>
@@ -340,7 +340,7 @@
     <value>75, 23</value>
   </data>
   <data name="btnAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>700</value>
   </data>
   <data name="btnAbout.Text" xml:space="preserve">
     <value>&amp;About</value>
