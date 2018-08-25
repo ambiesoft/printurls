@@ -7,3 +7,9 @@ This application prints html pages which consist of one index page and other con
 2. In the second dialog, Click '**Extract link**' to get the URLs for printing. You can remove unneccesary links by clicking 'Remove' or 'Crop' after selecting target links.
 3. Click 'Print' to start printing. Each pages on the list will open in the browser and be printed automatically by using default printer.
 
+## License
+### Drag and Drop List View
+https://www.codeproject.com/Articles/7034/Drag-and-Drop-List-View
+
+### html-agility-pack
+MIT License
