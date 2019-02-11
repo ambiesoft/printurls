@@ -88,11 +88,29 @@ namespace printurls.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First duplicating items found and selected..
+        /// </summary>
+        internal static string DUPITEM_FOUND {
+            get {
+                return ResourceManager.GetString("DUPITEM_FOUND", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Interval Wait: .
         /// </summary>
         internal static string INTERVAL_WAIT {
             get {
                 return ResourceManager.GetString("INTERVAL_WAIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No duplication found..
+        /// </summary>
+        internal static string NO_DUPITEM_FOUND {
+            get {
+                return ResourceManager.GetString("NO_DUPITEM_FOUND", resourceCulture);
             }
         }
         

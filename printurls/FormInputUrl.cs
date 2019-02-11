@@ -16,21 +16,37 @@ namespace printurls
         {
             InitializeComponent();
 
-            StringBuilder sb=new StringBuilder();
-            foreach (string arg in args)
+            StringBuilder sbEnterUrls = new StringBuilder();
+            try
             {
-                sb.AppendLine(arg);
+                for(int i=0 ; i < args.Length; ++i)
+                {
+                    string arg = args[i];
+                    if (arg == "-page")
+                    {
+                        ++i;
+                        txtPageUrl.Text = args[i];
+                    }
+                    else
+                    {
+                        sbEnterUrls.AppendLine(arg);
+                    }
+                }
             }
-            txtEnterURLs.Text = sb.ToString();   
+            catch (Exception) { }
+            txtEnterURLs.Text = sbEnterUrls.ToString();   
         }
 
         private void FormInputUrl_Load(object sender, EventArgs e)
         {
-            try
+            if (string.IsNullOrEmpty(txtPageUrl.Text))
             {
-                txtPageUrl.Text = Clipboard.GetText();
+                try
+                {
+                    txtPageUrl.Text = Clipboard.GetText();
+                }
+                catch (Exception) { }
             }
-            catch (Exception) { }
 
             radioOpenUrl.Checked = true;
         }
@@ -158,7 +174,7 @@ namespace printurls
             sb.Append(Application.ProductName);
             sb.Append("Version");
             sb.Append(" ");
-            sb.Append(AmbLib.getAssemblyVersion(Assembly.GetExecutingAssembly()));
+            sb.Append(AmbLib.getAssemblyVersion(Assembly.GetExecutingAssembly(),3));
             sb.AppendLine();
             sb.Append("copyright 2017 ");
             sb.Append("Ambiesoft");

@@ -42,6 +42,18 @@ namespace printurls
             wbBase.Navigate(_url);
         }
         
+        void addToListIfNotEmpty(string url)
+        {
+            if (string.IsNullOrEmpty(url))
+                return;
+
+            url = url.Trim();
+
+            if (string.IsNullOrEmpty(url))
+                return;
+
+            listUrls.Items.Add(url);
+        }
         void ExtractLinks(bool bOnlySelected)
         {
             using (new WaitCursor())
@@ -103,7 +115,8 @@ namespace printurls
                         foreach (HtmlAgilityPack.HtmlNode link in adoc.DocumentNode.SelectNodes("//a[@href]"))
                         {
                             Uri u = new Uri(baseurl, link.Attributes["href"].Value.ToString());
-                            listUrls.Items.Add(u.AbsoluteUri);
+                            // listUrls.Items.Add(u.AbsoluteUri);
+                            addToListIfNotEmpty(u.AbsoluteUri);
                         }
                     }
                     catch (Exception ex)
@@ -119,14 +132,15 @@ namespace printurls
                 {
                     HtmlDocument doc = wbBase.Document;
                     Dictionary<string, int> tagcounter = new Dictionary<string, int>();
-                    List<string> urls = new List<string>();
+                    // List<string> urls = new List<string>();
                     foreach (HtmlElement elm in doc.All)
                     {
                         if (elm.TagName == "a" || elm.TagName == "A")
                         {
                             string url = elm.GetAttribute("href");
-                            urls.Add(url);
-                            listUrls.Items.Add(url);
+                            // urls.Add(url);
+                            // listUrls.Items.Add(url);
+                            addToListIfNotEmpty(url);
                         }
                     }
                 }
@@ -371,6 +385,76 @@ namespace printurls
         private void tsClear_Click(object sender, EventArgs e)
         {
             listUrls.Items.Clear();
+        }
+
+        void clearSelection()
+        {
+            foreach(ListViewItem item in listUrls.Items)
+            {
+                item.Selected = false;
+            }
+        }
+        int findDup(int iStart, string text)
+        {
+            for (int i = iStart; i < listUrls.Items.Count; ++i)
+            {
+                string testtext = listUrls.Items[i].Text;
+                if (testtext == text)
+                    return i;
+            }
+            return -1;
+        }
+        private void btnFindDuplicates_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < listUrls.Items.Count; ++i)
+            {
+                int found = findDup(i + 1, listUrls.Items[i].Text);
+                if (found >= 0)
+                {
+                    clearSelection();
+                    listUrls.Items[i].Focused = listUrls.Items[i].Selected = true;
+                    listUrls.Items[found].Focused = listUrls.Items[found].Selected = true;
+
+                    listUrls.EnsureVisible(i);
+
+                    CppUtils.CenteredMessageBox(this,
+                        Properties.Resources.DUPITEM_FOUND,
+                        Application.ProductName,
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    return;
+                }
+            }
+
+            CppUtils.CenteredMessageBox(this,
+                          Properties.Resources.NO_DUPITEM_FOUND,
+                          Application.ProductName,
+                          MessageBoxButtons.OK,
+                          MessageBoxIcon.Information);
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            bool first = true;
+            foreach(ListViewItem item in listUrls.SelectedItems)
+            {
+                if (!first)
+                    sb.AppendLine();
+                else
+                    first = false;
+
+                sb.Append(item.Text);
+            }
+
+            try
+            {
+                Clipboard.SetText(sb.ToString());
+            }
+            catch(Exception ex)
+            {
+                CppUtils.Alert(ex);
+            }
         }
 
     

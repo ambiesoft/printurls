@@ -126,11 +126,17 @@
   <data name="DONE" xml:space="preserve">
     <value>Done.</value>
   </data>
+  <data name="DUPITEM_FOUND" xml:space="preserve">
+    <value>First duplicating items found and selected.</value>
+  </data>
   <data name="INTERVAL_WAIT" xml:space="preserve">
     <value>Interval Wait: </value>
   </data>
   <data name="NOURL" xml:space="preserve">
     <value>No Urls</value>
+  </data>
+  <data name="NO_DUPITEM_FOUND" xml:space="preserve">
+    <value>No duplication found.</value>
   </data>
   <data name="NO_ITEM_SELECTED" xml:space="preserve">
     <value>No items selected.</value>

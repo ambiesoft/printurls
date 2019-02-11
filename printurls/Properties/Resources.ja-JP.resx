@@ -126,11 +126,17 @@
   <data name="DONE" xml:space="preserve">
     <value>終了しました</value>
   </data>
+  <data name="DUPITEM_FOUND" xml:space="preserve">
+    <value>最初の重複するアイテムが見つかりました。選択されます。</value>
+  </data>
   <data name="INTERVAL_WAIT" xml:space="preserve">
     <value>インターバル待機： </value>
   </data>
   <data name="NOURL" xml:space="preserve">
     <value>URLがありません</value>
+  </data>
+  <data name="NO_DUPITEM_FOUND" xml:space="preserve">
+    <value>重複するアイテムは見つかりませんでした。</value>
   </data>
   <data name="NO_ITEM_SELECTED" xml:space="preserve">
     <value>アイテムが選択されていません。</value>

@@ -25,5 +25,5 @@
     "ShouldBeOneOfThem": [],
     
     "obtainverfrom": "History.txt",
-    "obtainverregex": "\\d+\\.\\d+"
+    "obtainverregex": "\\d+\\.\\d+\\.\\d+"
 }
