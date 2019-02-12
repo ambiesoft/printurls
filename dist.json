@@ -1,7 +1,7 @@
 {
 	"name": "printurls",
-	"solution": "printurls2013.sln",
-	"targetproject": "printurls2013",
+	"solution": "printurls.sln",
+	"targetproject": "printurls",
 	"configuration": "Release",
     "targets": [
             {

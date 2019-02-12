@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C# Express 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "printurls", "printurls\printurls.csproj", "{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragNDrop", "DragAndDropListView\DragNDrop.csproj", "{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}"
