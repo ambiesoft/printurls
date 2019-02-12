@@ -138,7 +138,7 @@
     <value>20, 22</value>
   </data>
   <data name="wbBase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 246</value>
+    <value>744, 190</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="wbBase.TabIndex" type="System.Int32, mscorlib">
@@ -178,25 +178,25 @@
     <value>155, 23</value>
   </metadata>
   <data name="removeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="removeToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Remove</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Open</value>
   </data>
   <data name="copyToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>117, 22</value>
   </data>
   <data name="copyToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;Copy</value>
   </data>
   <data name="ctxListItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 92</value>
+    <value>118, 70</value>
   </data>
   <data name="&gt;&gt;ctxListItem.Name" xml:space="preserve">
     <value>ctxListItem</value>
@@ -211,7 +211,7 @@
     <value>0, 25</value>
   </data>
   <data name="listUrls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 220</value>
+    <value>744, 164</value>
   </data>
   <data name="listUrls.TabIndex" type="System.Int32, mscorlib">
     <value>300</value>
@@ -391,7 +391,7 @@
     <value>0, 0</value>
   </data>
   <data name="tsExtract.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 25</value>
+    <value>744, 25</value>
   </data>
   <data name="tsExtract.TabIndex" type="System.Int32, mscorlib">
     <value>200</value>
@@ -421,10 +421,10 @@
     <value>1</value>
   </data>
   <data name="spWebList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 495</value>
+    <value>744, 383</value>
   </data>
   <data name="spWebList.SplitterDistance" type="System.Int32, mscorlib">
-    <value>246</value>
+    <value>190</value>
   </data>
   <data name="spWebList.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -493,10 +493,10 @@
     <value>NoControl</value>
   </data>
   <data name="btnCrop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>612, 7</value>
+    <value>395, 3</value>
   </data>
   <data name="btnCrop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>170, 25</value>
   </data>
   <data name="btnCrop.TabIndex" type="System.Int32, mscorlib">
     <value>500</value>
@@ -571,7 +571,7 @@
     <value>Right</value>
   </data>
   <data name="btnPrintAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 38</value>
+    <value>361, 38</value>
   </data>
   <data name="btnPrintAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>255, 25</value>
@@ -598,10 +598,10 @@
     <value>Right</value>
   </data>
   <data name="btnRemoveItem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>693, 6</value>
+    <value>571, 2</value>
   </data>
   <data name="btnRemoveItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>170, 25</value>
   </data>
   <data name="btnRemoveItem.TabIndex" type="System.Int32, mscorlib">
     <value>600</value>
@@ -625,7 +625,7 @@
     <value>Right</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>649, 38</value>
+    <value>622, 38</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 25</value>
@@ -661,10 +661,10 @@
     <value>1</value>
   </data>
   <data name="spRoot.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 595</value>
+    <value>744, 483</value>
   </data>
   <data name="spRoot.SplitterDistance" type="System.Int32, mscorlib">
-    <value>495</value>
+    <value>383</value>
   </data>
   <data name="spRoot.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -685,7 +685,7 @@
     <value>0, 573</value>
   </metadata>
   <data name="slMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>711, 17</value>
+    <value>684, 17</value>
   </data>
   <data name="slMain.Text" xml:space="preserve">
     <value>Ready</value>
@@ -697,10 +697,10 @@
     <value>0 Items</value>
   </data>
   <data name="statusMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 573</value>
+    <value>0, 461</value>
   </data>
   <data name="statusMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 22</value>
+    <value>744, 22</value>
   </data>
   <data name="statusMain.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -724,7 +724,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>771, 595</value>
+    <value>744, 483</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1023,6 +1023,9 @@
         AADAAwAAwAMAAMADAADAAwAAwAMAAA==
 </value>
   </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>718, 372</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Extract URLs : PrintURLs</value>
   </data>
@@ -1042,6 +1045,12 @@
     <value>openToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;copyToolStripMenuItem.Name" xml:space="preserve">
+    <value>copyToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;copyToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tsbExtractAllLinks.Name" xml:space="preserve">
@@ -1109,12 +1118,6 @@
   </data>
   <data name="&gt;&gt;slItemCount.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyToolStripMenuItem.Name" xml:space="preserve">
-    <value>copyToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;copyToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormIterate</value>

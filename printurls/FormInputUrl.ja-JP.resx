@@ -112,29 +112,35 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnStart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 336</value>
-  </data>
-  <data name="btnStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 23</value>
-  </data>
   <data name="btnStart.Text" xml:space="preserve">
     <value>スタート(&amp;S)</value>
   </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 336</value>
-  </data>
-  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 23</value>
-  </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>キャンセル(&amp;C)</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="radioOpenUrl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 17</value>
+  </data>
+  <data name="radioOpenUrl.Text" xml:space="preserve">
+    <value>目次ページを開いてリンクを取得(&amp;O)</value>
+  </data>
+  <data name="radioEnterURLs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 17</value>
+  </data>
+  <data name="radioEnterURLs.Text" xml:space="preserve">
+    <value>URLを入力(&amp;E)</value>
+  </data>
+  <data name="btnExpand.Text" xml:space="preserve">
+    <value>展開(&amp;P)</value>
+  </data>
+  <data name="btnAbout.Text" xml:space="preserve">
+    <value>情報(&amp;A)...</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

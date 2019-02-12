@@ -95,6 +95,39 @@ namespace printurls
         [STAThread]
         static void Main(string[] args)
         {
+            try
+            {
+                string lang = string.Empty;
+                for (int i = 0; i < args.Length; ++i)
+                {
+                    string arg = args[i];
+                    if (arg == "-lang")
+                    {
+                        lang = args[i + 1];
+                        if (string.Compare(lang, "ja", true) == 0 ||
+                            string.Compare(lang, "jp", true) == 0 ||
+                            string.Compare(lang, "jpn", true) == 0 ||
+                            string.Compare(lang, "japanese", true) == 0)
+                        {
+                            lang = "ja-JP";
+                        }
+                        break;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(lang))
+                {
+                    System.Globalization.CultureInfo ci = new System.Globalization.CultureInfo("ja-JP");
+                    System.Threading.Thread.CurrentThread.CurrentCulture = ci;
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = ci;
+                }
+            }
+            catch (Exception ex)
+            {
+                Ambiesoft.CppUtils.Alert(ex);
+                return;
+            }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 

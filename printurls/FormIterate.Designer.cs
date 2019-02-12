@@ -37,6 +37,7 @@
             this.ctxListItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsExtract = new System.Windows.Forms.ToolStrip();
             this.tsbExtractAllLinks = new System.Windows.Forms.ToolStripButton();
             this.tsbExtractSelectedLinks = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +59,6 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.slItemCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.spWebList)).BeginInit();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
@@ -129,6 +129,12 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // tsExtract
             // 
@@ -284,12 +290,6 @@
             // 
             this.slItemCount.Name = "slItemCount";
             resources.ApplyResources(this.slItemCount, "slItemCount");
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // FormIterate
             // 

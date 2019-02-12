@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,299 +117,39 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="wbPrint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>閉じる(&amp;C)</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="wbPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 57</value>
-  </data>
-  <data name="wbPrint.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>20, 22</value>
-  </data>
-  <data name="wbPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 369</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="wbPrint.TabIndex" type="System.Int32, mscorlib">
-    <value>300</value>
-  </data>
-  <data name="&gt;&gt;wbPrint.Name" xml:space="preserve">
-    <value>wbPrint</value>
-  </data>
-  <data name="&gt;&gt;wbPrint.Type" xml:space="preserve">
-    <value>System.Windows.Forms.WebBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;wbPrint.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;wbPrint.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="btnClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="btnClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>644, 438</value>
-  </data>
-  <data name="btnClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 28</value>
-  </data>
-  <data name="btnClose.TabIndex" type="System.Int32, mscorlib">
-    <value>900</value>
-  </data>
-  <data name="btnClose.Text" xml:space="preserve">
-    <value>&amp;Close</value>
-  </data>
-  <data name="&gt;&gt;btnClose.Name" xml:space="preserve">
-    <value>btnClose</value>
-  </data>
-  <data name="&gt;&gt;btnClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnClose.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnClose.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="udWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="udWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 442</value>
-  </data>
-  <data name="udWait.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="udWait.TabIndex" type="System.Int32, mscorlib">
-    <value>400</value>
-  </data>
-  <data name="&gt;&gt;udWait.Name" xml:space="preserve">
-    <value>udWait</value>
-  </data>
-  <data name="&gt;&gt;udWait.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;udWait.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;udWait.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="chkPause.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="chkPause.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="chkPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 444</value>
+    <value>550, 444</value>
   </data>
   <data name="chkPause.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
-  </data>
-  <data name="chkPause.TabIndex" type="System.Int32, mscorlib">
-    <value>800</value>
+    <value>88, 17</value>
   </data>
   <data name="chkPause.Text" xml:space="preserve">
-    <value>Pa&amp;use</value>
+    <value>一時停止(&amp;U)</value>
   </data>
-  <data name="&gt;&gt;chkPause.Name" xml:space="preserve">
-    <value>chkPause</value>
-  </data>
-  <data name="&gt;&gt;chkPause.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkPause.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chkPause.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="basicTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="progMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="progMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="progMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 23</value>
-  </data>
-  <data name="progMain.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="&gt;&gt;progMain.Name" xml:space="preserve">
-    <value>progMain</value>
-  </data>
-  <data name="&gt;&gt;progMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;progMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;progMain.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="statusMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 436</value>
-  </metadata>
   <data name="slBrowser.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 17</value>
+    <value>47, 17</value>
   </data>
   <data name="slBrowser.Text" xml:space="preserve">
-    <value>Browser</value>
+    <value>ブラウザ</value>
   </data>
   <data name="slStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 17</value>
+    <value>59, 17</value>
   </data>
   <data name="slStatus.Text" xml:space="preserve">
-    <value>Ready</value>
-  </data>
-  <data name="statusMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 474</value>
-  </data>
-  <data name="statusMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>771, 22</value>
-  </data>
-  <data name="statusMain.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="statusMain.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;statusMain.Name" xml:space="preserve">
-    <value>statusMain</value>
-  </data>
-  <data name="&gt;&gt;statusMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;statusMain.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnPrintAndGoNext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="btnPrintAndGoNext.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnPrintAndGoNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 438</value>
-  </data>
-  <data name="btnPrintAndGoNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 28</value>
-  </data>
-  <data name="btnPrintAndGoNext.TabIndex" type="System.Int32, mscorlib">
-    <value>500</value>
+    <value>準備完了</value>
   </data>
   <data name="btnPrintAndGoNext.Text" xml:space="preserve">
-    <value>&amp;Print and Go Next</value>
-  </data>
-  <data name="&gt;&gt;btnPrintAndGoNext.Name" xml:space="preserve">
-    <value>btnPrintAndGoNext</value>
-  </data>
-  <data name="&gt;&gt;btnPrintAndGoNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnPrintAndGoNext.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnPrintAndGoNext.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="txtUrl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="txtUrl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
-  </data>
-  <data name="txtUrl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 20</value>
-  </data>
-  <data name="txtUrl.TabIndex" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="&gt;&gt;txtUrl.Name" xml:space="preserve">
-    <value>txtUrl</value>
-  </data>
-  <data name="&gt;&gt;txtUrl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtUrl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtUrl.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="udPrintWait.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="udPrintWait.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 443</value>
-  </data>
-  <data name="udPrintWait.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 20</value>
-  </data>
-  <data name="udPrintWait.TabIndex" type="System.Int32, mscorlib">
-    <value>700</value>
-  </data>
-  <data name="&gt;&gt;udPrintWait.Name" xml:space="preserve">
-    <value>udPrintWait</value>
-  </data>
-  <data name="&gt;&gt;udPrintWait.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;udPrintWait.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;udPrintWait.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>322, 446</value>
+    <value>プリントして次へ(&amp;P)</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 13</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>600</value>
+    <value>58, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>PrintWait:</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>771, 496</value>
+    <value>プリント待：</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -709,30 +449,6 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Print : PrintURLs</value>
-  </data>
-  <data name="&gt;&gt;basicTimer.Name" xml:space="preserve">
-    <value>basicTimer</value>
-  </data>
-  <data name="&gt;&gt;basicTimer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;slBrowser.Name" xml:space="preserve">
-    <value>slBrowser</value>
-  </data>
-  <data name="&gt;&gt;slBrowser.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;slStatus.Name" xml:space="preserve">
-    <value>slStatus</value>
-  </data>
-  <data name="&gt;&gt;slStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormPrint</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>プリント : PrintURLs</value>
   </data>
 </root>

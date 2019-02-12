@@ -220,6 +220,9 @@
         TgDQASA1MVpwzwAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnFindDuplicates.Text" xml:space="preserve">
+    <value>重複を見つける(&amp;F)</value>
+  </data>
   <data name="btnCrop.Text" xml:space="preserve">
     <value>刈り取る(&amp;P)</value>
   </data>
