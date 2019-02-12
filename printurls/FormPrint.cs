@@ -43,22 +43,29 @@ namespace printurls
             Close();
         }
 
+        WebBrowserReadyState CurrentBrowserState
+        {
+            get
+            {
+                try
+                {
+                    return wbPrint.ReadyState;
+                }
+                catch (Exception ex)
+                {
+                    slStatus.Text = ex.Message;
+                }
+                return WebBrowserReadyState.Uninitialized;
+            }
+        }
         private bool _forcenext;
         void waitBrowser()
         {
             btnPrintAndGoNext.Enabled = true;
             int start = Environment.TickCount;
             bool failed = false;
-            WebBrowserReadyState curstate = WebBrowserReadyState.Uninitialized;
-            try
-            {
-                curstate = wbPrint.ReadyState;
-            }
-            catch (Exception ex)
-            {
-                slStatus.Text = ex.Message;
-            }
-            while (curstate < WebBrowserReadyState.Complete)
+
+            while (CurrentBrowserState < WebBrowserReadyState.Complete)
             {
                 Application.DoEvents();
                 if (_forcenext)
