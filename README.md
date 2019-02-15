@@ -1,6 +1,6 @@
 # printurls
 
-This application prints html pages which consist of one index page and other content pages to which the index page has link.
+This application prints all html pages of the index page which has its link.
 
 ## Usage
 1. Lanuch the app and enter URL of the index page, and click **OK**.
