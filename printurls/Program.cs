@@ -95,6 +95,8 @@ namespace printurls
         [STAThread]
         static void Main(string[] args)
         {
+            Ambiesoft.CppUtils.AmbSetProcessDPIAware();
+
             try
             {
                 string lang = string.Empty;
