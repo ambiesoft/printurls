@@ -168,7 +168,7 @@ namespace printurls
         void UpdateTitle()
         {
             this.Text = string.Format("{0}% {1} - {2}",
-                AmbLib.GetRatioString(_curIndex, _urls.Count),
+                AmbLib.GetRatioString(_curIndex, _urls.Count, 0),
                 _curIndex.ToString() + "/" + _urls.Count.ToString(),
                 Application.ProductName);
         }

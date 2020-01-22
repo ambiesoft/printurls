@@ -1,4 +1,7 @@
-﻿2020/01/23　ver1.3.6
+﻿2020/01/23　ver1.3.7
+keta 0
+
+2020/01/23　ver1.3.6
 Title has %. save wait count
 
 2019/06/17　ver1.3.5
