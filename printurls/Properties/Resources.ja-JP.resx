@@ -129,6 +129,9 @@
   <data name="DUPITEM_FOUND" xml:space="preserve">
     <value>最初の重複するアイテムが見つかりました。選択されます。</value>
   </data>
+  <data name="FAILED_TO_SAVE_INI" xml:space="preserve">
+    <value>iniの保存に失敗しました。</value>
+  </data>
   <data name="INTERVAL_WAIT" xml:space="preserve">
     <value>インターバル待機： </value>
   </data>

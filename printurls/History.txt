@@ -1,4 +1,7 @@
-﻿2019/06/17　ver1.3.5
+﻿2020/01/23　ver1.3.6
+Title has %. save wait count
+
+2019/06/17　ver1.3.5
 HighDPI
 
 2019/02/12 ver1.3.4

@@ -8,14 +8,41 @@ using System.Windows.Forms;
 using System.Printing;
 using System.Drawing.Printing;
 using Ambiesoft;
+using System.IO;
 
 namespace printurls
 {
     public partial class FormPrint : Form
     {
+        readonly string SECTION_OPTION = "options";
+        readonly string KEY_WAIT_COUNT = "waitcount";
+
+        private bool _forcenext;
+        PrintQueue _pq;
+        int _curIndex = 0;
+        static bool _inprocess = false;
+        int _waitCounter = 0;
+        internal List<string> _urls = null;
+
+        string IniFile
+        {
+            get
+            {
+                string ret = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath),
+                    Path.GetFileNameWithoutExtension(Application.ExecutablePath) + ".ini");
+                return ret;
+            }
+        }
         public FormPrint()
         {
             InitializeComponent();
+
+            HashIni ini = Profile.ReadAll(IniFile);
+            int intval;
+            if (Profile.GetInt(SECTION_OPTION, KEY_WAIT_COUNT, -1, out intval, ini) && intval > 0)
+            {
+                udWait.Value = intval;
+            }
             this.Size = new Size(this.Size.Width, (int)(this.Size.Height * 1.5));
             Program.commonwb(wbPrint);
             wbPrint.StatusTextChanged += new EventHandler(wbPrint_StatusTextChanged);
@@ -24,14 +51,11 @@ namespace printurls
         {
             slBrowser.Text = wbPrint.StatusText;
         }
-        internal List<string> _urls = null;
-
         
+
+
         private void FormPrint_Load(object sender, EventArgs e)
         {
- 
-
-
             progMain.Maximum = _urls.Count;
             basicTimer.Enabled = true;
         }
@@ -58,7 +82,7 @@ namespace printurls
                 return WebBrowserReadyState.Uninitialized;
             }
         }
-        private bool _forcenext;
+        
         void waitBrowser()
         {
             btnPrintAndGoNext.Enabled = true;
@@ -98,17 +122,17 @@ namespace printurls
         void waitSimple(int sec)
         {
             int start = Environment.TickCount;
-            while(true)
+            while (true)
             {
                 Application.DoEvents();
-                if((Environment.TickCount-start) > (sec*1000))
+                if ((Environment.TickCount - start) > (sec * 1000))
                 {
                     break;
                 }
             }
         }
 
-        PrintQueue pq_;
+        
         private void initPrinter()
         {
             //if (pq_ != null)
@@ -117,7 +141,7 @@ namespace printurls
             LocalPrintServer lps = new LocalPrintServer();
             PrintQueueCollection queueCollection = lps.GetPrintQueues();
 
-            
+
             PrinterSettings settings = new PrinterSettings();
             if (settings == null)
                 return;
@@ -128,23 +152,26 @@ namespace printurls
             {
                 if (pq.FullName == defprinter)
                 {
-                    pq_ = pq;
+                    _pq = pq;
                     return;
                 }
             }
         }
-        
+
         private int GetNumberOfPrintJobs()
         {
             initPrinter();
-            return pq_ == null ? 0 : pq_.NumberOfJobs;
+            return _pq == null ? 0 : _pq.NumberOfJobs;
         }
 
-        
-        int _curIndex = 0;
-        static bool inprocess = false;
-        int _waitCounter=0;
 
+        void UpdateTitle()
+        {
+            this.Text = string.Format("{0}% {1} - {2}",
+                AmbLib.GetRatioString(_curIndex, _urls.Count),
+                _curIndex.ToString() + "/" + _urls.Count.ToString(),
+                Application.ProductName);
+        }
         private void DoTimerStaff()
         {
             progMain.Value = _curIndex;
@@ -168,7 +195,7 @@ namespace printurls
 
                 _waitCounter = (decimal.ToInt32(udWait.Value));
                 ++_curIndex;
-                this.Text = _curIndex.ToString() + "/" + _urls.Count.ToString();
+                UpdateTitle();
                 progMain.Value = _curIndex;
 
                 if (_curIndex >= _urls.Count)
@@ -195,18 +222,17 @@ namespace printurls
         }
         private void basicTimer_Tick(object sender, EventArgs e)
         {
-
             if (_curIndex >= _urls.Count)
                 return;
 
-            if (inprocess)
+            if (_inprocess)
                 return;
 
             if (_waitCounter > 0)
             {
                 slStatus.Text = Properties.Resources.INTERVAL_WAIT + _waitCounter.ToString();
                 --_waitCounter;
-                
+
                 return;
             }
 
@@ -224,9 +250,9 @@ namespace printurls
 
             slStatus.Text = "";
 
-            inprocess = true;
+            _inprocess = true;
             DoTimerStaff();
-            inprocess = false;
+            _inprocess = false;
         }
 
         private void btnPrintAndGoNext_Click(object sender, EventArgs e)
@@ -252,6 +278,12 @@ namespace printurls
                 return;
             }
 
+            HashIni ini = Profile.ReadAll(IniFile);
+            Profile.WriteInt(SECTION_OPTION, KEY_WAIT_COUNT, decimal.ToInt32(udWait.Value), ini);
+            if(!Profile.WriteAll(ini,IniFile))
+            {
+                CppUtils.Alert(Properties.Resources.FAILED_TO_SAVE_INI);
+            }
             Environment.Exit(0);
         }
     }
