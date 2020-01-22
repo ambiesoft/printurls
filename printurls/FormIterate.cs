@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using mshtml;
 using Ambiesoft;
 using System.Diagnostics;
+using System.Web;
 
 namespace printurls
 {
@@ -114,7 +115,8 @@ namespace printurls
                         adoc.LoadHtml(html);
                         foreach (HtmlAgilityPack.HtmlNode link in adoc.DocumentNode.SelectNodes("//a[@href]"))
                         {
-                            Uri u = new Uri(baseurl, link.Attributes["href"].Value.ToString());
+                            string ret = HttpUtility.HtmlDecode(link.Attributes["href"].Value.ToString());
+                            Uri u = new Uri(baseurl, ret);
                             // listUrls.Items.Add(u.AbsoluteUri);
                             addToListIfNotEmpty(u.AbsoluteUri);
                         }
