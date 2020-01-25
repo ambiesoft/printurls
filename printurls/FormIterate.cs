@@ -55,6 +55,53 @@ namespace printurls
 
             listUrls.Items.Add(url);
         }
+        internal static string GetSourceUrlFromHtml(string html)
+        {
+            if (string.IsNullOrEmpty(html))
+                return string.Empty;
+
+            string firstparg = "SourceURL:";
+            html = html.Replace("\r\n", "\n").Replace("\r", "\n");
+            foreach(string fragment in html.Split('\n'))
+            {
+                if (fragment.IndexOf(firstparg) == 0)
+                {
+                    return fragment.Substring(firstparg.Length);
+                }
+            }
+            return string.Empty;
+        }
+        internal static string[] GetUrlsFromHtml(string html)
+        {
+            return GetUrlsFromHtml(html, null);
+        }
+        internal static string[] GetUrlsFromHtml(string html, string baseUrl)
+        {
+            List<string> ret = new List<string>();
+            if (baseUrl == null)
+                baseUrl = GetSourceUrlFromHtml(html);
+
+            HtmlAgilityPack.HtmlDocument adoc = new HtmlAgilityPack.HtmlDocument();
+            adoc.LoadHtml(html);
+            if (adoc.DocumentNode == null)
+                return new string[0];
+            HtmlAgilityPack.HtmlNodeCollection nodes;
+            try
+            {
+                nodes = adoc.DocumentNode.SelectNodes("//a[@href]");
+            }
+            catch(Exception)
+            {
+                return new string[0];
+            }
+            foreach (HtmlAgilityPack.HtmlNode link in nodes)
+            {
+                string url = HttpUtility.HtmlDecode(link.Attributes["href"].Value.ToString());
+                Uri u = string.IsNullOrEmpty(baseUrl) ? new Uri(url) : new Uri(new Uri(baseUrl), url);
+                ret.Add(u.AbsoluteUri);
+            }
+            return ret.ToArray();
+        }
         void ExtractLinks(bool bOnlySelected)
         {
             using (new WaitCursor())
@@ -110,16 +157,9 @@ namespace printurls
                         if (string.IsNullOrEmpty(html))
                             throw new Exception("No Links in the selection");
 
-                        Uri baseurl = wbBase.Url;
-                        HtmlAgilityPack.HtmlDocument adoc = new HtmlAgilityPack.HtmlDocument();
-                        adoc.LoadHtml(html);
-                        foreach (HtmlAgilityPack.HtmlNode link in adoc.DocumentNode.SelectNodes("//a[@href]"))
-                        {
-                            string ret = HttpUtility.HtmlDecode(link.Attributes["href"].Value.ToString());
-                            Uri u = new Uri(baseurl, ret);
-                            // listUrls.Items.Add(u.AbsoluteUri);
-                            addToListIfNotEmpty(u.AbsoluteUri);
-                        }
+                        string[] urls = GetUrlsFromHtml(html, wbBase.Url.AbsoluteUri);
+                        foreach (string url in urls)
+                            addToListIfNotEmpty(url);
                     }
                     catch (Exception ex)
                     {
@@ -127,7 +167,7 @@ namespace printurls
                             ex.Message,
                             Application.ProductName,
                             MessageBoxButtons.OK,
-                            MessageBoxIcon.Asterisk);
+                            MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -459,12 +499,60 @@ namespace printurls
             }
         }
 
+        //protected override void OnDragEnter(DragEventArgs e)
+        //{
+        //    if (e.Data.GetDataPresent(DataFormats.Html))
+        //    {
+        //        e.Effect = DragDropEffects.Copy;
+        //    }
+
+        //    // call the base OnDragEnter event
+        //    base.OnDragEnter(e);
+        //}
+
+
     
 
 
 
 
    
+    }
+
+    public class MyDragAndDropListView : DragNDrop.DragAndDropListView
+    {
+        protected override void OnDragOver(DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Html))
+            {
+                e.Effect = DragDropEffects.Copy;
+                return;
+            }
+            base.OnDragOver(e);
+        }
+        protected override void OnDragDrop(DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Html))
+            {
+                object o = e.Data.GetData(DataFormats.Html);
+                if (o == null)
+                    return;
+                string[] urls = FormIterate.GetUrlsFromHtml(o.ToString());
+                foreach (string url in urls)
+                    Items.Add(url);
+                return;
+            }
+            base.OnDragDrop(e);
+        }
+        protected override void OnDragEnter(DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Html))
+            {
+                e.Effect = DragDropEffects.Copy;
+                return;
+            }
+            base.OnDragEnter(e);
+        }
     }
 
     class WaitCursor : IDisposable

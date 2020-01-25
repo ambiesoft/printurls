@@ -171,21 +171,18 @@ namespace printurls
         private void btnAbout_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(Application.ProductName);
-            sb.Append("Version");
-            sb.Append(" ");
-            sb.Append(AmbLib.getAssemblyVersion(Assembly.GetExecutingAssembly(),3));
+            sb.AppendFormat("{0} ver {1}", Application.ProductName, AmbLib.getAssemblyVersion(Assembly.GetExecutingAssembly(),3));
             sb.AppendLine();
-            sb.Append("copyright 2017 ");
-            sb.Append("Ambiesoft");
+            sb.AppendLine(Application.CompanyName);
+            sb.Append(AmbLib.getAssemblyCopyright(Assembly.GetExecutingAssembly()));
 
             CppUtils.CenteredMessageBox(this,
                 sb.ToString(),
                 Application.ProductName,
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
-                
         }
+
 
     }
 }

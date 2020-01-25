@@ -1,4 +1,7 @@
-﻿2020/01/23　ver1.3.8
+﻿2020/01/25　ver1.3.9
+drag drop links
+
+2020/01/23　ver1.3.8
 html entity
 
 2020/01/23　ver1.3.7

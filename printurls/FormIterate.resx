@@ -220,7 +220,7 @@
     <value>listUrls</value>
   </data>
   <data name="&gt;&gt;listUrls.Type" xml:space="preserve">
-    <value>DragNDrop.DragAndDropListView, DragNDrop, Version=1.0.6981.36853, Culture=neutral, PublicKeyToken=null</value>
+    <value>DragNDrop.DragAndDropListView, DragNDrop, Version=1.0.7326.42909, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;listUrls.Parent" xml:space="preserve">
     <value>spWebList.Panel2</value>
@@ -250,7 +250,7 @@
     <value>Magenta</value>
   </data>
   <data name="tsbExtractAllLinks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 22</value>
+    <value>110, 22</value>
   </data>
   <data name="tsbExtractAllLinks.Text" xml:space="preserve">
     <value>Extract &amp;All Links</value>
@@ -274,7 +274,7 @@
     <value>Magenta</value>
   </data>
   <data name="tsbExtractSelectedLinks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
+    <value>140, 22</value>
   </data>
   <data name="tsbExtractSelectedLinks.Text" xml:space="preserve">
     <value>Extract &amp;Selected Links</value>
