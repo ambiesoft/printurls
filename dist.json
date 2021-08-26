@@ -1,26 +1,46 @@
 {
 	"name": "printurls",
 	"solution": "printurls.sln",
-	"targetproject": "printurls",
+	"targetproject": "zzzDist",
 	"configuration": "Release",
     "targets": [
             {
             	"setoutdirforbuild": true,
-                "outdir" : "C:/Linkout/printurls/",
-                "platform":"Any CPU"
+                "outdir" : "build/printurls/",
+                "platform":"Win32"
             }
     ],
     "archivedir": "C:/Linkout/",
-    "remotedir": "http://ambiesoft.fam.cx/ffdav/uploads/printurls/",
-    "remotesha1" : "http://ambiesoft.fam.cx/ffdav/uploads/getSha1.php?file=printurls/{}",
-    
-    "TotalFileCount": 18,
+    "remotedir": "https://ambiesoft.com/ffdav/uploads/printurls/",
+    "remotesha1" : "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=printurls/{}",
     
     "ShouldNotBeFiles": [
     ],
     
     "ShouldBeFiles": [
+        "Ambiesoft.AmbLib.dll",
+        "Ambiesoft.AmbLib.pdb",
+        "Ambiesoft.AmbLibcpp.dll",
+        "Ambiesoft.AmbLibcpp.pdb",
+        "Ambiesoft.Profile.dll",
+        "Ambiesoft.Profile.pdb",
+        "Copying.txt",
+        "DragNDrop.dll",
+        "History.txt",
+        "HtmlAgilityPack.dll",
+        "HtmlAgilityPack.pdb",
+        "HtmlAgilityPack.xml",
+        "LICENSE",
+        "Microsoft.mshtml.dll",
+        "msvcp120.dll",
+        "msvcr120.dll",
+        "printurls.exe",
+        "printurls.pdb",
+        "README.md",
+        "vccorlib120.dll",
+        "ja-JP\\printurls.resources.dll"
     ],
+    "TotalFileCount": "exact",    
     
     "ShouldBeOneOfThem": [],
     

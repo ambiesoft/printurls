@@ -7,20 +7,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "printurls", "printurls\prin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragNDrop", "DragAndDropListView\DragNDrop.csproj", "{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zzzDist", "zzzDist\zzzDist.vcxproj", "{D72BC864-359E-411F-B2BE-841641F0E7F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6} = {C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE} = {6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Debug|Win32.Build.0 = Debug|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Release|Win32.ActiveCfg = Release|Any CPU
+		{6DE72A25-A2EC-45C8-A3AE-54FD6E9A9DEE}.Release|Win32.Build.0 = Release|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Debug|Win32.Build.0 = Debug|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Release|Win32.ActiveCfg = Release|Any CPU
+		{C7E21F05-C166-4DCC-8429-EC8A4C1A67B6}.Release|Win32.Build.0 = Release|Any CPU
+		{D72BC864-359E-411F-B2BE-841641F0E7F9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D72BC864-359E-411F-B2BE-841641F0E7F9}.Release|Win32.ActiveCfg = Release|Win32
+		{D72BC864-359E-411F-B2BE-841641F0E7F9}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

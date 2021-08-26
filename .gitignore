@@ -1,6 +1,10 @@
 .vs/
 bin/
 obj/
-
+Debug/
+Release/
+build/
+ipch/
+*.sdf
 *.suo
 *.user

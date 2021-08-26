@@ -1,4 +1,7 @@
-﻿2020/01/25　ver1.3.9
+﻿2021/08/26　ver1.3.10
+Add runtime libraries
+
+2020/01/25　ver1.3.9
 drag drop links
 
 2020/01/23　ver1.3.8
