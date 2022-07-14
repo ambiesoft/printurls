@@ -40,12 +40,10 @@
         "HtmlAgilityPack.xml",
         "LICENSE",
         "Microsoft.mshtml.dll",
-        "msvcp120.dll",
-        "msvcr120.dll",
         "printurls.exe",
+        "printurls.exe.config",
         "printurls.pdb",
         "README.md",
-        "vccorlib120.dll",
         "ja-JP\\printurls.resources.dll"
     ],
     "TotalFileCount": "exact",    
