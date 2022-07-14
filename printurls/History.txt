@@ -1,4 +1,7 @@
-﻿2021/08/26　ver1.3.10
+﻿2022/07/14　ver2.1.0
+Migrated to VS2022 and .NET4.8
+
+2021/08/26　ver1.3.10
 Add runtime libraries
 
 2020/01/25　ver1.3.9

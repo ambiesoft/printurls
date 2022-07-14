@@ -95,7 +95,7 @@ namespace printurls
         [STAThread]
         static void Main(string[] args)
         {
-            Ambiesoft.CppUtils.AmbSetProcessDPIAware();
+            // Ambiesoft.CppUtils.AmbSetProcessDPIAware();
 
             try
             {

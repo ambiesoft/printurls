@@ -8,3 +8,6 @@ ipch/
 *.sdf
 *.suo
 *.user
+
+printurls/gitrev.cs
+

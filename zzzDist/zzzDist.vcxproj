@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -58,10 +58,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>echo C:\LegacyPrograms\FFC\FFC.exe /t12 "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC120.CRT\*" /to:"$(OutDir)"
-C:\LegacyPrograms\FFC\FFC.exe /t12 "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC120.CRT\*" /to:"$(OutDir)"
-
-del "$(OutDir)zzzDist.*"</Command>
+      <Command>del "$(OutDir)zzzDist.*"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -81,10 +78,7 @@ del "$(OutDir)zzzDist.*"</Command>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>echo C:\LegacyPrograms\FFC\FFC.exe /t12 "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC120.CRT\*" /to:"$(OutDir)"
-C:\LegacyPrograms\FFC\FFC.exe /t12 "$(VCInstallDir)redist\$(PlatformTarget)\Microsoft.VC120.CRT\*" /to:"$(OutDir)"
-
-del "$(OutDir)zzzDist.*"</Command>
+      <Command>del "$(OutDir)zzzDist.*"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

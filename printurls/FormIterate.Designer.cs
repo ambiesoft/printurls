@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIterate));
             this.spWebList = new System.Windows.Forms.SplitContainer();
             this.wbBase = new System.Windows.Forms.WebBrowser();
-            this.listUrls = new MyDragAndDropListView();
+            this.listUrls = new printurls.MyDragAndDropListView();
             this.hdUrl = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ctxListItem = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

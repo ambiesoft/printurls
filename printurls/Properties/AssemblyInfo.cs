@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ambiesoft")]
 [assembly: AssemblyProduct("printurls")]
-[assembly: AssemblyCopyright("Copyright © 2019")]
+[assembly: AssemblyCopyright("Copyright © 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -15,5 +15,5 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("aaff787d-a476-49e3-a9c8-2cebb93b8160")]
 
-[assembly: AssemblyVersion("1.3.10.*")]
+[assembly: AssemblyVersion("2.1.0.*")]
 

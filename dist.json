@@ -14,6 +14,14 @@
     "remotedir": "https://ambiesoft.com/ffdav/uploads/printurls/",
     "remotesha1" : "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=printurls/{}",
     
+    "gitrev": {
+    	"gits": ["C:/cygwin/bin/git.exe", "C:/local/msys2/usr/bin/git.exe"],
+    	"gitdirs": [
+	    	"."
+	    ],
+    	"outcsharp": "printurls/gitrev.cs"
+    }, 
+        
     "ShouldNotBeFiles": [
     ],
     

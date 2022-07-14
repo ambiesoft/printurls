@@ -175,14 +175,15 @@ namespace printurls
             sb.AppendLine();
             sb.AppendLine(Application.CompanyName);
             sb.Append(AmbLib.getAssemblyCopyright(Assembly.GetExecutingAssembly()));
-
+            sb.AppendLine();
+            sb.AppendLine();
+            sb.AppendLine("gitrev:");
+            sb.AppendLine(Ambiesoft.GitRev.GetHashMessage());
             CppUtils.CenteredMessageBox(this,
                 sb.ToString(),
                 Application.ProductName,
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
-
-
     }
 }
