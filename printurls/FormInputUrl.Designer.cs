@@ -3,14 +3,14 @@
     partial class FormInputUrl
     {
         /// <summary>
-        /// 必要なデザイナ変数です。
+        /// 
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 使用中のリソースをすべてクリーンアップします。
+        /// 
         /// </summary>
-        /// <param name="disposing">マネージ リソースが破棄される場合 true、破棄されない場合は false です。</param>
+        /// <param name="disposing"></param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows フォーム デザイナで生成されたコード
+        #region Windows 
 
         /// <summary>
-        /// デザイナ サポートに必要なメソッドです。このメソッドの内容を
-        /// コード エディタで変更しないでください。
+        /// 
+        /// 
         /// </summary>
         private void InitializeComponent()
         {

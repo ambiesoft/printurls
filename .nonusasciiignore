@@ -1,0 +1,6 @@
+*.resx
+*.ico
+DragAndDropListView/
+HtmlAgilityPack/
+printurls/History.txt
+testhtml/testhtml.7z
