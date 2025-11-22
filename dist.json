@@ -13,6 +13,7 @@
     "archivedir": "C:/Linkout/",
     "remotedir": "https://ambiesoft.com/ffdav/uploads/printurls/",
     "remotesha1" : "https://ambiesoft.com/ffdav/uploads/getSha1.php?file=printurls/{}",
+    "remoteonedrivedir":"https://1drv.ms/f/c/f0d9ddc561f5cf32/EtiCxHumK7VAoK9qFZ-hliABIqYLJNb2waJde8uEXaF4cQ?e=zw3BTT",
     
     "gitrev": {
     	"gits": ["C:/cygwin/bin/git.exe", "C:/local/msys2/usr/bin/git.exe"],
