@@ -59,6 +59,7 @@
             this.statusMain = new System.Windows.Forms.StatusStrip();
             this.slMain = new System.Windows.Forms.ToolStripStatusLabel();
             this.slItemCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.spWebList)).BeginInit();
             this.spWebList.Panel1.SuspendLayout();
             this.spWebList.Panel2.SuspendLayout();
@@ -216,6 +217,7 @@
             // 
             // spRoot.Panel2
             // 
+            this.spRoot.Panel2.Controls.Add(this.btnSettings);
             this.spRoot.Panel2.Controls.Add(this.btnFindDuplicates);
             this.spRoot.Panel2.Controls.Add(this.btnCrop);
             this.spRoot.Panel2.Controls.Add(this.txtTmp);
@@ -291,6 +293,13 @@
             this.slItemCount.Name = "slItemCount";
             resources.ApplyResources(this.slItemCount, "slItemCount");
             // 
+            // btnSettings
+            // 
+            resources.ApplyResources(this.btnSettings, "btnSettings");
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // FormIterate
             // 
             this.AcceptButton = this.btnPrintAll;
@@ -352,6 +361,7 @@
         private System.Windows.Forms.Button btnCrop;
         private System.Windows.Forms.Button btnFindDuplicates;
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
 

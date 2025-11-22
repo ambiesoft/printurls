@@ -499,6 +499,11 @@ namespace printurls
             }
         }
 
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            DialogSettings.DoShowDialog(this);
+        }
+
         //protected override void OnDragEnter(DragEventArgs e)
         //{
         //    if (e.Data.GetDataPresent(DataFormats.Html))
@@ -511,12 +516,12 @@ namespace printurls
         //}
 
 
-    
 
 
 
 
-   
+
+
     }
 
     public class MyDragAndDropListView : DragNDrop.DragAndDropListView

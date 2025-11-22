@@ -133,7 +133,6 @@ namespace printurls
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-
             setBrowserEmulationMode(GetIEVersion());
 
             FormInputUrl inputdlg = new FormInputUrl(args);

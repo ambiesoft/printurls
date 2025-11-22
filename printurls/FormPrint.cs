@@ -9,6 +9,7 @@ using System.Printing;
 using System.Drawing.Printing;
 using Ambiesoft;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace printurls
 {
@@ -201,6 +202,26 @@ namespace printurls
                 if (_curIndex >= _urls.Count)
                 {
                     this.Focus();
+                    if(DialogSettings.IsUseWavAfterFinished && File.Exists(DialogSettings.WavFile))
+                    {
+                        try
+                        {
+                            Task.Factory.StartNew(() =>
+                            {
+                                try
+                                {
+                                    var player = new System.Media.SoundPlayer(DialogSettings.WavFile);
+                                    player.PlaySync();
+                                }
+                                catch
+                                {
+
+                                }
+                            });
+                        }
+                        catch {}
+                    }
+
                     CppUtils.CenteredMessageBox(this,
                         Properties.Resources.DONE,
                         Application.ProductName,

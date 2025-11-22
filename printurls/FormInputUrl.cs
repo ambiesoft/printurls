@@ -185,5 +185,10 @@ namespace printurls
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            DialogSettings.DoShowDialog(this);
+        }
     }
 }

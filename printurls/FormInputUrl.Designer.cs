@@ -38,6 +38,7 @@
             this.txtEnterURLs = new System.Windows.Forms.TextBox();
             this.btnExpand = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPageUrl
@@ -99,12 +100,20 @@
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
+            // btnSettings
+            // 
+            resources.ApplyResources(this.btnSettings, "btnSettings");
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // FormInputUrl
             // 
             this.AcceptButton = this.btnStart;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnExpand);
             this.Controls.Add(this.txtEnterURLs);
@@ -132,5 +141,6 @@
         private System.Windows.Forms.TextBox txtEnterURLs;
         private System.Windows.Forms.Button btnExpand;
         private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
